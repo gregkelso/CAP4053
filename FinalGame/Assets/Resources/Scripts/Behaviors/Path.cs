@@ -100,7 +100,7 @@ public class Path {
 
             //Set number of vertices and points to draw
             lineRenderer.SetVertexCount(points.Length);
-            lineRenderer.SetPositions(points);
+            //lineRenderer.SetPositions(points);
         } 
     }
 
