@@ -26,8 +26,8 @@ public class Seek : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         checkInput(); //Handle User input
-        //pathFinder.getGrid().generate(); //Regenerate grid
-        //seek(); //Seek target destination based on path selected
+        pathFinder.getGrid().generate(); //Regenerate grid
+        seek(); //Seek target destination based on path selected
     }
 
     //Check for and process user input
@@ -162,8 +162,9 @@ public class Seek : MonoBehaviour {
                 Gizmos.DrawCube(n.getPosition(), new Vector3(1, 1, 0) * (grid.getNodeDiameter() - .5f));
             }
 
-            if (path != null) {
-                foreach(Vector3 n in path.getPath()) {
+            //Draw Debug Path
+            if (debugPath == true && path != null) {
+                foreach (Vector3 n in path.getPath()) {
                     Gizmos.color = Color.black;
                     Gizmos.DrawCube(n, new Vector3(1, 1, 0) * (grid.getNodeDiameter() - .5f));
                 }

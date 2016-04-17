@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 //PathFinding Behavior which implements A* Algorithm to steer an agent from one location to another 
 public class PathFinder {
@@ -23,41 +24,38 @@ public class PathFinder {
         GridNode startNode = grid.getNode(startPos);
         GridNode targetNode = grid.getNode(targetPos);
 
-        //Exit if nodes are out of bounds
-        if (startNode == null || targetNode == null)
-            return null;
-
-        //Instantiate Open and Closed set DataStructures for A* Algorithm
+        List<GridNode> openSet = new List<GridNode>();
         HashSet<GridNode> closedSet = new HashSet<GridNode>();
-        Heap<GridNode> openSet = new Heap<GridNode>(grid.MaxSize);        
-        openSet.Add(startNode); //Add start node to the open set
+        openSet.Add(startNode);
 
-        //Iterate through as long as openset is not empty
         while(openSet.Count > 0) {
-            //Store first node in collection 
-            GridNode currentNode = openSet.RemoveFirst();
+            GridNode currentNode = openSet[0];
+
+            for(int i = 1; i < openSet.Count; i++) {
+                if(openSet[i].fCost < currentNode.fCost || openSet[i].fCost == currentNode.fCost && openSet[i].hCost < currentNode.hCost) {
+                    currentNode = openSet[i];
+                }
+            }
+
+            openSet.Remove(currentNode);
             closedSet.Add(currentNode);
 
-            //Check if arrived at target node
             if(currentNode == targetNode) {
-                //Retrace and get coordinates
                 List<GridNode> points = retracePath(startNode, targetNode);
-
-                //Convert to a path
                 return getPath(points);
             }
 
             //Iterate through all neighbor nodes
-            foreach(GridNode neighbor in grid.GetNeighbors(currentNode)) {
+            foreach (GridNode neighbor in grid.GetNeighbors(currentNode)) {
                 //Skip node if not walkable or already used
                 if (!neighbor.isWalkable() || closedSet.Contains(neighbor))
                     continue;
 
-                //Calculate the move cost to the neighbor nodes
+                //Calculate the new move cost to the neighbor nodes
                 float moveCost = currentNode.gCost + GridNode.getDistance(currentNode, neighbor);
 
                 //Calculate neighbor's costs
-                if(moveCost < neighbor.gCost || !openSet.Contains(neighbor)) {
+                if (moveCost < neighbor.gCost || !openSet.Contains(neighbor)) {
                     //Set Costs
                     neighbor.gCost = moveCost;
                     neighbor.hCost = GridNode.getDistance(neighbor, targetNode);
@@ -70,7 +68,6 @@ public class PathFinder {
             }
         }
 
-        //Unable to find a path
         return null;
     }
 

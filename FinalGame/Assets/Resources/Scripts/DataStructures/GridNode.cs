@@ -5,11 +5,11 @@ public class GridNode : IHeapItem<GridNode> {
     private Vector3 position; //Exact position in 3D Coordinates
     private bool walkable; //Is node traversable
     private Point gridPosition; //Grid Cell which contains this position
-    public int HeapIndex;
+    public int heapIndex;
 
-    public int heapIndex {
-        get { return HeapIndex; }
-        set { HeapIndex = value; }
+    public int HeapIndex {
+        get { return heapIndex; }
+        set { heapIndex = value; }
     }
 
     //Costs and Links
@@ -43,10 +43,10 @@ public class GridNode : IHeapItem<GridNode> {
     }
 
     //Return the manhattan distance between two gridnodes
-    public static float getDistance(GridNode nodeA, GridNode nodeB) {
+    public static int getDistance(GridNode nodeA, GridNode nodeB) {
         //Number of grid hops in x and y directions
-        float xDistance = Mathf.Abs(nodeA.gridPosition.x - nodeB.gridPosition.x);
-        float yDistance = Mathf.Abs(nodeA.gridPosition.y - nodeB.gridPosition.y);
+        int xDistance = Mathf.Abs(nodeA.gridPosition.x - nodeB.gridPosition.x);
+        int yDistance = Mathf.Abs(nodeA.gridPosition.y - nodeB.gridPosition.y);
 
         //Return correct distance
         //Cost = 10 for Up,Down,Left,Right
