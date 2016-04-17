@@ -53,7 +53,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 36, y: 49}
+  m_Size: {x: 34, y: 45}
 --- !u!114 &11408046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbcdf341ed5cb7c40ba7a47e15077f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 46524f4e54
+  id: Front
   angle: 0
   rayDistance: 50
   debug: 1
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3729d6af9620a445801e070c609a811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 46524f4e54
+  id: Front
   firstAngle: -45
   secondAngle: 45
   debug: 1
@@ -101,7 +101,9 @@ MonoBehaviour:
   radius: 150
   debug: 1
   values: []
-  mask: {}
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &11422434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3729d6af9620a445801e070c609a811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 5249474854
+  id: Right
   firstAngle: 225
   secondAngle: 315
   debug: 1
@@ -129,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbcdf341ed5cb7c40ba7a47e15077f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 4c454654
+  id: Left
   angle: 45
   rayDistance: 50
   debug: 1
@@ -159,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3729d6af9620a445801e070c609a811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 4241434b
+  id: Back
   firstAngle: 135
   secondAngle: 225
   debug: 1
@@ -170,7 +172,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158016}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb62bb24ef004ed43824511f38dddfee, type: 3}
   m_Name: 
@@ -190,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3729d6af9620a445801e070c609a811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 4c454654
+  id: Left
   firstAngle: 45
   secondAngle: 135
   debug: 1
@@ -206,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbcdf341ed5cb7c40ba7a47e15077f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 5249474854
+  id: Right
   angle: -45
   rayDistance: 50
   debug: 1
@@ -222,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbcdf341ed5cb7c40ba7a47e15077f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 4241434b
+  id: Back
   angle: 180
   rayDistance: 50
   debug: 1
@@ -266,7 +268,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 21300000, guid: fb15ab5dbd8fc3b47b709dfdf2fb265b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 39dfecf444faf75498c1c2d3c9ba2f3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
