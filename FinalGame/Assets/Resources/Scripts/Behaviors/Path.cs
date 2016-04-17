@@ -136,4 +136,17 @@ public class Path {
     public Vector3[] getPath() {
         return path.ToArray();
     }
+
+    //Smoothen the path based on an input Grid
+    public void quickSmooth(Grid grid) {
+        //Copy Path
+        Vector3[] pathCopy = path.ToArray();
+
+        //Destroy Original Points
+        //Destroy();
+
+        //Calculate smoothened path
+
+        //Re-add Nodes to object
+    }
 }

@@ -24,6 +24,10 @@ public class PathFinder {
         GridNode startNode = grid.getNode(startPos);
         GridNode targetNode = grid.getNode(targetPos);
 
+        //Prevent pathfinding on node not part of grid
+        if (startNode == null || targetNode == null)
+           return null;
+
         List<GridNode> openSet = new List<GridNode>();
         HashSet<GridNode> closedSet = new HashSet<GridNode>();
         openSet.Add(startNode);

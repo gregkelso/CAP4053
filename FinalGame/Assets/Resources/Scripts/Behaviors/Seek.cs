@@ -45,10 +45,11 @@ public class Seek : MonoBehaviour {
                 path.Destroy();
 
             //Set mouse click as target destination and generate path 
-            path = pathFinder.findPath(transform.position, getMouseCoordinates());
+            path = pathFinder.findPath(transform.position, getMouseCoordinates());      
 
             //Set parent object if path is available
             if (path != null) {
+                path.quickSmooth(pathFinder.getGrid()); //Apply basic path smoothener
                 path.pathObj.transform.parent = transform;
             }
 

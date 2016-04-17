@@ -55,8 +55,6 @@ public class GridNode : IHeapItem<GridNode> {
             return 14 * yDistance + 10 * (xDistance - yDistance);
         else 
             return 14 * xDistance + 10 * (yDistance - xDistance);
-
-        //return Mathf.Sqrt(Mathf.Pow(nodeA.gridPosition.x - nodeB.gridPosition.x, 2) + Mathf.Pow(nodeA.gridPosition.y - nodeB.gridPosition.y, 2));
     }
 
     public int CompareTo(GridNode nodeToCompare) {
