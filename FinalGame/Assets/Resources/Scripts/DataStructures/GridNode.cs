@@ -14,9 +14,9 @@ public class GridNode : IHeapItem<GridNode> {
 
     //Costs and Links
     public GridNode parent; //Parent of this grid node
-    public int gCost; //Distance from start node
-    public int hCost; //Heuristic distance from target node (Manhattan Distance)
-    public int fCost { //Sum of costs
+    public float gCost; //Distance from start node
+    public float hCost; //Heuristic distance from target node (Manhattan Distance)
+    public float fCost { //Sum of costs
         get { return gCost + hCost; }
     }
 
@@ -43,10 +43,10 @@ public class GridNode : IHeapItem<GridNode> {
     }
 
     //Return the manhattan distance between two gridnodes
-    public static int getDistance(GridNode nodeA, GridNode nodeB) {
+    public static float getDistance(GridNode nodeA, GridNode nodeB) {
         //Number of grid hops in x and y directions
-        int xDistance = Mathf.Abs(nodeA.gridPosition.x - nodeB.gridPosition.x);
-        int yDistance = Mathf.Abs(nodeA.gridPosition.y - nodeB.gridPosition.y);
+        float xDistance = Mathf.Abs(nodeA.gridPosition.x - nodeB.gridPosition.x);
+        float yDistance = Mathf.Abs(nodeA.gridPosition.y - nodeB.gridPosition.y);
 
         //Return correct distance
         //Cost = 10 for Up,Down,Left,Right
@@ -55,6 +55,8 @@ public class GridNode : IHeapItem<GridNode> {
             return 14 * yDistance + 10 * (xDistance - yDistance);
         else 
             return 14 * xDistance + 10 * (yDistance - xDistance);
+
+        //return Mathf.Sqrt(Mathf.Pow(nodeA.gridPosition.x - nodeB.gridPosition.x, 2) + Mathf.Pow(nodeA.gridPosition.y - nodeB.gridPosition.y, 2));
     }
 
     public int CompareTo(GridNode nodeToCompare) {

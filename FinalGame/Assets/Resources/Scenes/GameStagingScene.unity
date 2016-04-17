@@ -908,7 +908,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11435372, guid: c39a2b6cf3c04614eac7875d2854e68f, type: 2}
       propertyPath: debugGrid
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c39a2b6cf3c04614eac7875d2854e68f, type: 2}
@@ -2124,7 +2124,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1739461691
 Transform:
   m_ObjectHideFlags: 0

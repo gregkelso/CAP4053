@@ -23,6 +23,8 @@ public class Path {
 
         //Init GameObject
         pathObj = new GameObject("Path");
+        pathObj.transform.localPosition = Vector3.zero;
+        pathObj.transform.localScale = Vector3.zero;
 
         //Config Line Renderer
         lineRenderer = pathObj.AddComponent<LineRenderer>();
@@ -129,5 +131,9 @@ public class Path {
     public void DestroyWayPoints() {
         foreach (GameObject g in wayPoints.ToArray())
             MonoBehaviour.Destroy(g);
+    }
+
+    public Vector3[] getPath() {
+        return path.ToArray();
     }
 }

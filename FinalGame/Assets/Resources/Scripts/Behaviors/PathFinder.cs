@@ -54,7 +54,7 @@ public class PathFinder {
                     continue;
 
                 //Calculate the move cost to the neighbor nodes
-                int moveCost = currentNode.gCost + GridNode.getDistance(currentNode, neighbor);
+                float moveCost = currentNode.gCost + GridNode.getDistance(currentNode, neighbor);
 
                 //Calculate neighbor's costs
                 if(moveCost < neighbor.gCost || !openSet.Contains(neighbor)) {

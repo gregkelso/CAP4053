@@ -8,9 +8,9 @@ public class Seek : MonoBehaviour {
     
     //PUBLIC
     public bool debugGrid; //Displays grid debug
-    public bool debugPath; 
+    public bool debugPath; //Display visual debug path
     public bool targetSet; //While true, agent is currently seeking to destination
-    public float arrivalRadius = 50; //How close to target till considered arrived at target
+    public float arrivalRadius = 25; //How close to target till considered arrived at target
     public Vector3 target; //Specific Target node to face and move to
     public PathFinder pathFinder; //Calculate path from start to goal
     public Path path; //Store a path created from path finder or manually placed points
@@ -18,16 +18,16 @@ public class Seek : MonoBehaviour {
     // Use this for initialization
     void Start () {    
         controller = GetComponent<Controller>(); //Obtain agent controller for movement
-        LayerMask mask = 1 << 9 | 1 << 10; //Consider obstacles non-traversable
-        pathFinder = new PathFinder(20, mask); //Initialize PathFinder
+        LayerMask mask = 1 << 9; //Consider obstacles non-traversable
+        pathFinder = new PathFinder(10, mask); //Initialize PathFinder
         targetSet = false; //A target hasn't been selected
 	}
 	
 	// Update is called once per frame
 	void Update () {
         checkInput(); //Handle User input
-        pathFinder.getGrid().generate(); //Regenerate grid
-        seek(); //Seek target destination based on path selected
+        //pathFinder.getGrid().generate(); //Regenerate grid
+        //seek(); //Seek target destination based on path selected
     }
 
     //Check for and process user input
@@ -50,7 +50,6 @@ public class Seek : MonoBehaviour {
             //Set parent object if path is available
             if (path != null) {
                 path.pathObj.transform.parent = transform;
-             
             }
 
             //Disable target till next tick
@@ -62,7 +61,7 @@ public class Seek : MonoBehaviour {
             //If path doesn't exist
             if (path == null) {
                 //Create and configure a new path
-                path = new Path(true);
+                path = new Path(debugPath);
                 path.pathObj.transform.parent = transform;
                 path.addNode(transform.position);
                 targetSet = false;
@@ -161,6 +160,13 @@ public class Seek : MonoBehaviour {
                     Gizmos.color = Color.cyan;
 
                 Gizmos.DrawCube(n.getPosition(), new Vector3(1, 1, 0) * (grid.getNodeDiameter() - .5f));
+            }
+
+            if (path != null) {
+                foreach(Vector3 n in path.getPath()) {
+                    Gizmos.color = Color.black;
+                    Gizmos.DrawCube(n, new Vector3(1, 1, 0) * (grid.getNodeDiameter() - .5f));
+                }
             }
         }
     }
