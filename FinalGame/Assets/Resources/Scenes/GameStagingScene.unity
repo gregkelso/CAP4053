@@ -903,15 +903,11 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11435372, guid: c39a2b6cf3c04614eac7875d2854e68f, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11435372, guid: c39a2b6cf3c04614eac7875d2854e68f, type: 2}
-      propertyPath: debug
+      propertyPath: debugPath
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11435372, guid: c39a2b6cf3c04614eac7875d2854e68f, type: 2}
-      propertyPath: debugPath
+      propertyPath: debugGrid
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

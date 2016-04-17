@@ -10,6 +10,7 @@ public class Path {
     public Queue<Vector3> path; //List of points which make the path
     public Queue<GameObject> wayPoints; //List of gameobjects which display path
     public LineRenderer lineRenderer; //Line which draws path 
+
     
     //Instantiate path
     public Path(bool debug) {
@@ -28,10 +29,10 @@ public class Path {
         lineRenderer.material = Resources.Load("Materials/Path") as Material;
         lineRenderer.SetWidth(10, 10); //Set width of line
 
-        //if (debug)
-        //    enableDebug();
-        //else
-        //    disableDebug(); //Disable debug mode
+        if (debug)
+            enableDebug();
+        else
+            disableDebug(); //Disable debug mode
     }
 
     //Add Node to end of path
@@ -40,10 +41,12 @@ public class Path {
         path.Enqueue(node);
 
         //Create WayPoint
-        GameObject wp = MonoBehaviour.Instantiate(wayPointPrefab) as GameObject;
-        //wp.transform.parent = pathObj.transform; //Make parent of path - DO NOT USE
-        wp.transform.position = node; //Set waypoint position
-        wayPoints.Enqueue(wp); //Add waypoint to object list
+        if (lineRenderer.enabled == true) {
+            GameObject wp = MonoBehaviour.Instantiate(wayPointPrefab) as GameObject;
+            //wp.transform.parent = pathObj.transform; //Make parent of path - DO NOT USE
+            wp.transform.position = node; //Set waypoint position
+            wayPoints.Enqueue(wp); //Add waypoint to object list
+        }
 
         //Update line renderer to draw path
         updateRenderer();
@@ -68,7 +71,9 @@ public class Path {
 
         try {
             //Remove next Waypoint from game to prevent mem leak
-            MonoBehaviour.Destroy(wayPoints.Dequeue());
+            //Check that wp exists before destroying - only not in sync when debug is off
+            if(wayPoints.Count > 0)
+                MonoBehaviour.Destroy(wayPoints.Dequeue());
             
             //Return point
             return path.Dequeue();     

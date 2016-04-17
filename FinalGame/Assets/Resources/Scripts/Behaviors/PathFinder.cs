@@ -4,6 +4,7 @@ using System.Collections.Generic;
 //PathFinding Behavior which implements A* Algorithm to steer an agent from one location to another 
 public class PathFinder {
     private Grid grid; //Grid used to generate path
+    private bool debug;
 
     //Initialize Path Finder
     public PathFinder(float nodeRadius, LayerMask mask) {
@@ -13,6 +14,7 @@ public class PathFinder {
         
         //Initialize Grid
         grid = new Grid(Vector3.zero, worldSize, nodeRadius, mask);
+        debug = false;
     }
 
     //Generate path from start to destination using A*
@@ -94,9 +96,9 @@ public class PathFinder {
     }
 
     //Return a Path from a list of points
-    private static Path getPath(List<GridNode> nodes) {
+    private Path getPath(List<GridNode> nodes) {
         //Instantiate a path
-        Path path = new Path(true);
+        Path path = new Path(debug);
 
         //Iterate through all points in the path
         foreach (GridNode node in nodes) 
@@ -109,5 +111,13 @@ public class PathFinder {
     //Return reference of pathfinding grid
     public Grid getGrid() {
         return grid;
+    }
+
+    public void enableDebug() {
+        debug = true;
+    }
+
+    public void disableDebug() {
+        debug = false;
     }
 }

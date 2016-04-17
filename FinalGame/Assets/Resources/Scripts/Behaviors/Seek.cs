@@ -32,6 +32,12 @@ public class Seek : MonoBehaviour {
 
     //Check for and process user input
     private void checkInput() {
+        //Trigger debug display
+        if (debugPath == false)
+            pathFinder.disableDebug();
+        else
+            pathFinder.enableDebug();
+
         //Check mouse input (Left click)
         if (Input.GetMouseButtonDown(0)) {
             //Delete path if one exists
@@ -44,12 +50,7 @@ public class Seek : MonoBehaviour {
             //Set parent object if path is available
             if (path != null) {
                 path.pathObj.transform.parent = transform;
-
-                //Trigger debug display
-                //if (debugPath == false)
-                //    path.disableDebug();
-                //else
-                //   path.enableDebug();
+             
             }
 
             //Disable target till next tick
