@@ -7,7 +7,8 @@ public class Seek : MonoBehaviour {
     private Controller controller; //Allows full control of agent
     
     //PUBLIC
-    public bool debug; //Displays grid debug
+    public bool debugGrid; //Displays grid debug
+    public bool debugPath; 
     public bool targetSet; //While true, agent is currently seeking to destination
     public float arrivalRadius = 50; //How close to target till considered arrived at target
     public Vector3 target; //Specific Target node to face and move to
@@ -41,8 +42,15 @@ public class Seek : MonoBehaviour {
             path = pathFinder.findPath(transform.position, getMouseCoordinates());
 
             //Set parent object if path is available
-            if(path != null)
+            if (path != null) {
                 path.pathObj.transform.parent = transform;
+
+                //Trigger debug display
+                //if (debugPath == false)
+                //    path.disableDebug();
+                //else
+                //   path.enableDebug();
+            }
 
             //Disable target till next tick
             targetSet = false;
@@ -55,7 +63,7 @@ public class Seek : MonoBehaviour {
                 //Create and configure a new path
                 path = new Path(true);
                 path.pathObj.transform.parent = transform;
-                //path.addNode(transform.position);
+                path.addNode(transform.position);
                 targetSet = false;
             }
 
@@ -100,14 +108,14 @@ public class Seek : MonoBehaviour {
         else if(path != null)  {
             //Target was not set, but a path exists
             try {
-                //NOT USING PATH NODE SENSOR
-                //Peek at next node, but don't remove so line is drawn
+                //Peek at next node, but don't remove so line is drawn correctly
                 target = path.peek();
 
+                //DO NOT USE - WAS ONLY MADE FOR CLASS 
                 //Using path node sensor to find nearest waypoint
                 //target = findClosestWayPoint().transform.position;
 
-                targetSet = true; //Re-engage target settings
+                targetSet = true; //Re-engage targeting settings
             }
             catch (Exception) {
                 //Occurs when no waypoints are nearby
@@ -135,7 +143,7 @@ public class Seek : MonoBehaviour {
     //Draw Debug Grid
     void OnDrawGizmos() {
         //Only draw if available and enabled
-        if (pathFinder != null && debug == true) {
+        if (pathFinder != null && debugGrid == true) {
             //Obtain grid reference
             Grid grid = pathFinder.getGrid();
 

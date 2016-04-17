@@ -20,18 +20,18 @@ public class Path {
         //Cache Waypoint prefab
         wayPointPrefab = Resources.Load("Prefabs/Waypoint") as GameObject;
 
-        //If Debug is enabled, show path
-        if (debug) {
-            //Init GameObject
-            pathObj = new GameObject("Path");
+        //Init GameObject
+        pathObj = new GameObject("Path");
 
-            //Config Line Renderer
-            lineRenderer = pathObj.AddComponent<LineRenderer>();
-            lineRenderer.material = Resources.Load("Materials/Path") as Material;
-            lineRenderer.SetWidth(10, 10); //Set width of line
-        }
-        else
-            disableDebug(); //Disable debug mode
+        //Config Line Renderer
+        lineRenderer = pathObj.AddComponent<LineRenderer>();
+        lineRenderer.material = Resources.Load("Materials/Path") as Material;
+        lineRenderer.SetWidth(10, 10); //Set width of line
+
+        //if (debug)
+        //    enableDebug();
+        //else
+        //    disableDebug(); //Disable debug mode
     }
 
     //Add Node to end of path
@@ -41,7 +41,7 @@ public class Path {
 
         //Create WayPoint
         GameObject wp = MonoBehaviour.Instantiate(wayPointPrefab) as GameObject;
-        //wp.transform.parent = obj.transform;
+        //wp.transform.parent = pathObj.transform; //Make parent of path - DO NOT USE
         wp.transform.position = node; //Set waypoint position
         wayPoints.Enqueue(wp); //Add waypoint to object list
 
@@ -100,7 +100,7 @@ public class Path {
 
             //Set number of vertices and points to draw
             lineRenderer.SetVertexCount(points.Length);
-            //lineRenderer.SetPositions(points);
+            lineRenderer.SetPositions(points); //Set points in pet to be displayed
         } 
     }
 
