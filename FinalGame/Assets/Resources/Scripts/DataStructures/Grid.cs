@@ -137,7 +137,7 @@ public class Grid {
 
         //Cast Ray
         RaycastHit2D hit = Physics2D.Raycast(src, direction, distance, unwalkableMask);
-        Debug.DrawRay(src, direction, Color.cyan);
+        //Debug.DrawRay(src, direction, Color.cyan);
 
         //If hit an object, return false since can't walk through it
         if (hit.collider != null) 

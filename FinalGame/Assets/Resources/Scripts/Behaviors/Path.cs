@@ -199,9 +199,6 @@ public class Path {
                     for (int i = 1; i < smoothened.Count; i++) {
                         addNode(smoothened[i].getDestination());
                     }
-
-                    //Append last node of path
-                    //addNode(destination.getDestination());
                 }   
             }
             catch (Exception) {
