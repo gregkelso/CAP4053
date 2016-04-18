@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using System.Diagnostics;
 
 //A behavior used to seek a target position
 public class Seek : MonoBehaviour {
@@ -45,7 +46,7 @@ public class Seek : MonoBehaviour {
                 path.Destroy();
 
             //Set mouse click as target destination and generate path 
-            path = pathFinder.findPath(transform.position, getMouseCoordinates());      
+            path = pathFinder.findPath(transform.position, getMouseCoordinates());
 
             //Set parent object if path is available
             if (path != null) {

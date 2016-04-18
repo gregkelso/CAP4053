@@ -77,7 +77,7 @@ public class Path {
             if (wayPoints.Count > 0) {
                 GameObject wp = wayPoints.Dequeue();
                 wp.SetActive(false);
-                MonoBehaviour.DestroyImmediate(wp);
+                MonoBehaviour.Destroy(wp);
             }
 
             //Return point
@@ -132,10 +132,14 @@ public class Path {
 
     //Iterate through all waypoint gameobjects and remove from game
     public void DestroyWayPoints() {
-        foreach (GameObject g in wayPoints) {
-            g.SetActive(false);
-            MonoBehaviour.Destroy(g);
+        //Iterate through all waypoints to set inactive and destroy 
+        foreach(GameObject wp in wayPoints) {
+            wp.SetActive(false);
+            MonoBehaviour.Destroy(wp);
         }
+
+        //Clear array of waypoints
+        wayPoints.Clear();
     }
 
     public Vector3[] getPath() {
@@ -189,8 +193,9 @@ public class Path {
                 addNode(smoothened[0].getDestination());
 
                 //iterate through smoothened edges, re-add to path
-                for (int i = 1; i < smoothened.Count; i++) 
+                for (int i = 1; i < smoothened.Count; i++) {
                     addNode(smoothened[i].getDestination());
+                }
             }
         }
         catch (Exception) {          
