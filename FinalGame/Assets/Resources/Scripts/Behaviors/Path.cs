@@ -150,55 +150,51 @@ public class Path {
     public void quickSmooth(Grid grid) {
         //Get Path as a list of edges
         List<Edge> pathEdges = getEdges();
-        List<Edge> smoothened = new List<Edge>(pathEdges);
+        List<Edge> deleteList = new List<Edge>(); //Temp list to hold edges which need deletion
 
-        //Create enumerators to iterate through edge list 
-        IEnumerator<Edge> e1 = pathEdges.GetEnumerator();
+        //Create enumerator to iterate through edge list 
         IEnumerator<Edge> e2 = pathEdges.GetEnumerator();
 
         //Only attempt smoothening if there are more than 2 edges
         if (pathEdges.Count >= 2) {
             //Position enumerators to first and second edges - Get last edge
-            e1.MoveNext(); //e1 points to first edge
-            e2.MoveNext(); //e2 points to second edge
-            e2.MoveNext();
-            Edge destination = pathEdges[pathEdges.Count - 1];
-            Edge e = e1.Current;
+            e2.MoveNext(); //Move enumerator to 1st edge
+            Edge e = e2.Current; //Set to first edge
 
-            //loop as long as e2 dest is not as destination
-            while (e2.Current.getDestination() != destination.getDestination()) {
+            //loop as long as enumerator has more items in list
+            while (e2.MoveNext() != false) {
                 //check for obstruction
                 if (grid.canWalkBetween(e.getSource(), e2.Current.getDestination()) == true) {
-                    //Assign edge1 destination the same value as edge2 destination
                     //Convert 2 edges into one
+                    //Assign edge1 destination the same value as edge2 destination
                     e.setDestination(e2.Current.getDestination());
 
                     //Delete edge2 from list
-                    smoothened.Remove(e2.Current);
+                    deleteList.Add(e2.Current);
                 }
                 else {
                     //Path is obstructed, keep original edge
-                    //Store edge2 as edge1 and fetch new edge to replace edge2 in next iteration
                     e = e2.Current;
                 }
+            }
 
-                //Iterate to next edge
-                e2.MoveNext();
+            //Delete all edges in the list
+            foreach(Edge edge in deleteList) {
+                pathEdges.Remove(edge);
             }
 
             //destroy original path
             clear();
 
             try {
-                //Recreate path based on smoothened edges
-                if (smoothened.Count >= 1) {
-                    addNode(smoothened[0].getSource());
-                    addNode(smoothened[0].getDestination());
+                //Recreate path based on smoothened edge points
+                if (pathEdges.Count >= 1) {
+                    addNode(pathEdges[0].getSource());
+                    addNode(pathEdges[0].getDestination());
 
                     //iterate through smoothened edges, re-add to path
-                    for (int i = 1; i < smoothened.Count; i++) {
-                        addNode(smoothened[i].getDestination());
-                    }
+                    for (int i = 1; i < pathEdges.Count; i++) 
+                        addNode(pathEdges[i].getDestination());
                 }   
             }
             catch (Exception) {

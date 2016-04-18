@@ -27,8 +27,8 @@ public class Seek : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         checkInput(); //Handle User input
-        //pathFinder.getGrid().generate(); //Regenerate grid
-        //seek(); //Seek target destination based on path selected
+        pathFinder.getGrid().generate(); //Regenerate grid
+        seek(); //Seek target destination based on path selected
     }
 
     //Check for and process user input
@@ -40,7 +40,7 @@ public class Seek : MonoBehaviour {
             pathFinder.enableDebug();
 
         //Check mouse input (Left click)
-        //if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0)) {
             //Delete path if one exists
             if(path != null)
                 path.Destroy();
@@ -56,22 +56,22 @@ public class Seek : MonoBehaviour {
 
             //Disable target till next tick
             targetSet = false;
-        //}   
+        }
 
         ////Check mouse input (right click)
-        //else if(Input.GetMouseButtonDown(1)) {
-        //    //If path doesn't exist
-        //    if (path == null) {
-        //        //Create and configure a new path
-        //        path = new Path(debugPath);
-        //        path.pathObj.transform.parent = transform;
-        //        path.addNode(transform.position);
-        //        targetSet = false;
-        //    }
+        else if (Input.GetMouseButtonDown(1)) {
+            //If path doesn't exist
+            if (path == null) {
+                //Create and configure a new path
+                path = new Path(debugPath);
+                path.pathObj.transform.parent = transform;
+                path.addNode(transform.position);
+                targetSet = false;
+            }
 
-        //    //Append clicked node to path
-        //    path.addNode(getMouseCoordinates());
-        //}
+            //Append clicked node to path
+            path.addNode(getMouseCoordinates());
+        }
     }
 
     //Return 3D world point based on mouse position
