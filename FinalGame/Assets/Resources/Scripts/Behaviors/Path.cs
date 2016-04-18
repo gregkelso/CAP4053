@@ -161,10 +161,11 @@ public class Path {
             //Position enumerators to first and second edges - Get last edge
             e1.MoveNext(); //e1 points to first edge
             e2.MoveNext(); //e2 points to second edge
+            e2.MoveNext();
             Edge destination = pathEdges[pathEdges.Count - 1];
 
             //loop as long as e2 dest is not as destination
-            while (e2.MoveNext() != false) {
+            while (e2.Current.getDestination() != destination.getDestination()) {
                 //check for obstruction
                 if (grid.canWalkBetween(e1.Current.getSource(), e2.Current.getDestination()) == true) {
                     //Assign edge1 destination the same value as edge2 destination
@@ -179,6 +180,9 @@ public class Path {
                     //Store edge2 as edge1 and fetch new edge to replace edge2 in next iteration
                     e1 = e2;
                 }
+
+                //Iterate to next edge
+                e2.MoveNext();
             }
 
             //destroy original path
@@ -194,10 +198,10 @@ public class Path {
                     for (int i = 1; i < smoothened.Count; i++) {
                         addNode(smoothened[i].getDestination());
                     }
-                }
 
-                //Append last node of path
-                addNode(destination.getDestination());
+                    //Append last node of path
+                    //addNode(destination.getDestination());
+                }   
             }
             catch (Exception) {
                 throw new Exception();
