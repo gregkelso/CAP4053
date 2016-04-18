@@ -74,9 +74,12 @@ public class Path {
         try {
             //Remove next Waypoint from game to prevent mem leak
             //Check that wp exists before destroying - only not in sync when debug is off
-            if(wayPoints.Count > 0)
-                MonoBehaviour.Destroy(wayPoints.Dequeue());
-            
+            if (wayPoints.Count > 0) {
+                GameObject wp = wayPoints.Dequeue();
+                wp.SetActive(false);
+                MonoBehaviour.DestroyImmediate(wp);
+            }
+
             //Return point
             return path.Dequeue();     
         }
@@ -129,8 +132,10 @@ public class Path {
 
     //Iterate through all waypoint gameobjects and remove from game
     public void DestroyWayPoints() {
-        foreach (GameObject g in wayPoints.ToArray())
+        foreach (GameObject g in wayPoints) {
+            g.SetActive(false);
             MonoBehaviour.Destroy(g);
+        }
     }
 
     public Vector3[] getPath() {
@@ -139,65 +144,71 @@ public class Path {
 
     //Smoothen the path based on an input Grid
     public void quickSmooth(Grid grid) {
-        //Get Path
-        Vector3[] pathPoints = path.ToArray();
-        Queue<Edge> pathEdges = getEdges();
-        Queue<Edge> smooth = new Queue<Edge>();
+        //Get Path as a list of edges
+        List<Edge> pathEdges = getEdges();
+        List<Edge> smoothened = new List<Edge>(pathEdges);
 
-        //get first and second edges
-        Edge e1 = pathEdges.Dequeue();
-        Edge e2 = pathEdges.Dequeue();
+        //Create enumerators to iterate through edge list 
+        IEnumerator<Edge> e1 = pathEdges.GetEnumerator();
+        IEnumerator<Edge> e2 = pathEdges.GetEnumerator();
 
-        //calculate last edge
-        Vector3 destination = pathPoints[pathPoints.Length - 1];
+        //Position enumerators to first and second edges - Get last edge
+        e1.MoveNext(); //e1 points to first edge
+        e2.MoveNext(); //e2 points to second edge
+        e2.MoveNext();
+        Vector3 destination = pathEdges[pathEdges.Count - 1].getDestination();  
 
         //loop as long as e2 dest is not as destination
-        while (e2.getDestination() != destination) {
+        while (e2.Current.getDestination() != destination) {
             //check for obstruction
-            if (grid.canWalkBetween(e1.getSource(), e2.getDestination()) == true) {
-                //reset dst of edge1
-                e1.setDestination(e2.getDestination());
+            if (grid.canWalkBetween(e1.Current.getSource(), e2.Current.getDestination()) == true) {
+                //Assign edge1 destination the same value as edge2 destination
+                //Convert 2 edges into one
+                e1.Current.setDestination(e2.Current.getDestination());
 
-                //delete e2 from path by adding e1 to smooth list and overwriting e2 with next node
-                smooth.Enqueue(e1);
-                e2 = pathEdges.Dequeue();
+                //Delete edge2 from list
+                smoothened.Remove(e2.Current);
             }
             else {
-                //since unable to modify path, store original node
-                smooth.Enqueue(e1);
-
-                //replace e1 with e2 and continue on to next node
+                //Path is obstructed, keep original edge
+                //Store edge2 as edge1 and fetch new edge to replace edge2 in next iteration
                 e1 = e2;
-                e2 = pathEdges.Dequeue();
             }
+
+            //Iterate to next edge
+            e2.MoveNext();
         }
 
         //destroy original path
-        DestroyWayPoints();
-        path.Clear();
+        clear();
 
-        //recreate based on smoothened edges
-        Edge s1 = smooth.Dequeue();
-        addNode(s1.getSource());
-        addNode(s1.getDestination());
+        try {
+            //Recreate path based on smoothened edges
+            if (smoothened.Count >= 1) {
+                addNode(smoothened[0].getSource());
+                addNode(smoothened[0].getDestination());
 
-        //iterate through smoothened edges, re-add to path
-        foreach (Edge e in smooth.ToArray()) {
-            addNode(e.getDestination());
+                //iterate through smoothened edges, re-add to path
+                for (int i = 1; i < smoothened.Count; i++) 
+                    addNode(smoothened[i].getDestination());
+            }
+        }
+        catch (Exception) {          
+            throw new Exception();
         }
     }
 
     //Convert path into a queue of edges
-    private Queue<Edge> getEdges() {
+    private List<Edge> getEdges() {
         //Convert path to array and create queue
         Vector3[] pathPoints = path.ToArray(); //Convert path to list of 3d points
-        Queue<Edge> pathEdges = new Queue<Edge>(); //Store queue of constructed edges to return
+        List<Edge> pathEdges = new List<Edge>(); //Store queue of constructed edges to return
         Edge previous = null; //Store previous edge
 
         //Store first edge if possible
         if (pathPoints.Length > 1) {
             previous = new Edge(pathPoints[0], pathPoints[1]);
-            pathEdges.Enqueue(previous); //Add to list
+            pathEdges.Add(previous); //Add to list
         }
 
         //Iterate through remaining points
@@ -208,7 +219,7 @@ public class Path {
             Edge current = new Edge(previous.getDestination(), pathPoints[i]);
 
             //Add Edge to final list
-            pathEdges.Enqueue(current);
+            pathEdges.Add(current);
 
             //Set previous to current edge
             previous = current;

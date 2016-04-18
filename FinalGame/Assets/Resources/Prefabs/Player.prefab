@@ -179,9 +179,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugGrid: 0
-  debugPath: 0
+  debugPath: 1
   targetSet: 0
-  arrivalRadius: 20
+  arrivalRadius: 30
   target: {x: 0, y: 0, z: 0}
 --- !u!114 &11441702
 MonoBehaviour:
