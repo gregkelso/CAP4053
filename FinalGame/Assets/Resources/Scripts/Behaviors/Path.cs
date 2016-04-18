@@ -139,14 +139,38 @@ public class Path {
 
     //Smoothen the path based on an input Grid
     public void quickSmooth(Grid grid) {
-        //Copy Path
-        Vector3[] pathCopy = path.ToArray();
+        //Get Path
+        Queue<Edge> pathEdges = getEdges();
+        
 
-        //Destroy Original Points
-        //Destroy();
 
-        //Calculate smoothened path
 
-        //Re-add Nodes to object
+        //Destroy original path & Recreate based on smoothened points
+    }
+
+    //Convert path into a queue of edges
+    private Queue<Edge> getEdges() {
+        //Convert path to array and create queue
+        Vector3[] pathPoints = path.ToArray();
+        Queue<Edge> pathEdges = new Queue<Edge>();
+
+        //Store first edge
+        if (pathPoints.Length > 1)
+            pathEdges.Enqueue(new Edge(pathPoints[0], pathPoints[1]));
+
+        //Iterate through remaining points
+        for (int i = 1; i < pathPoints.Length; i++) {
+            //Create new edge 
+            //src = previous edge's destination 
+            //dst = next point on list
+            Edge e = new Edge(pathEdges.Peek().getDestination(), pathPoints[i]);
+
+            //Add Edge to list
+            pathEdges.Enqueue(e);
+        }
+
+        //Return queue of Edges representing the path
+        return pathEdges;
     }
 }
+
