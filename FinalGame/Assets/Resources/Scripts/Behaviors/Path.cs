@@ -140,33 +140,78 @@ public class Path {
     //Smoothen the path based on an input Grid
     public void quickSmooth(Grid grid) {
         //Get Path
+        Vector3[] pathPoints = path.ToArray();
         Queue<Edge> pathEdges = getEdges();
-        
+        Queue<Edge> smooth = new Queue<Edge>();
 
+        //get first and second edges
+        Edge e1 = pathEdges.Dequeue();
+        Edge e2 = pathEdges.Dequeue();
 
+        //calculate last edge
+        Vector3 destination = pathPoints[pathPoints.Length - 1];
 
-        //Destroy original path & Recreate based on smoothened points
+        //loop as long as e2 dest is not as destination
+        while (e2.getDestination() != destination) {
+            //check for obstruction
+            if (grid.canWalkBetween(e1.getSource(), e2.getDestination()) == true) {
+                //reset dst of edge1
+                e1.setDestination(e2.getDestination());
+
+                //delete e2 from path by adding e1 to smooth list and overwriting e2 with next node
+                smooth.Enqueue(e1);
+                e2 = pathEdges.Dequeue();
+            }
+            else {
+                //since unable to modify path, store original node
+                smooth.Enqueue(e1);
+
+                //replace e1 with e2 and continue on to next node
+                e1 = e2;
+                e2 = pathEdges.Dequeue();
+            }
+        }
+
+        //destroy original path
+        DestroyWayPoints();
+        path.Clear();
+
+        //recreate based on smoothened edges
+        Edge s1 = smooth.Dequeue();
+        addNode(s1.getSource());
+        addNode(s1.getDestination());
+
+        //iterate through smoothened edges, re-add to path
+        foreach (Edge e in smooth.ToArray()) {
+            addNode(e.getDestination());
+        }
     }
 
     //Convert path into a queue of edges
     private Queue<Edge> getEdges() {
         //Convert path to array and create queue
-        Vector3[] pathPoints = path.ToArray();
-        Queue<Edge> pathEdges = new Queue<Edge>();
+        Vector3[] pathPoints = path.ToArray(); //Convert path to list of 3d points
+        Queue<Edge> pathEdges = new Queue<Edge>(); //Store queue of constructed edges to return
+        Edge previous = null; //Store previous edge
 
-        //Store first edge
-        if (pathPoints.Length > 1)
-            pathEdges.Enqueue(new Edge(pathPoints[0], pathPoints[1]));
+        //Store first edge if possible
+        if (pathPoints.Length > 1) {
+            previous = new Edge(pathPoints[0], pathPoints[1]);
+            pathEdges.Enqueue(previous); //Add to list
+        }
 
         //Iterate through remaining points
-        for (int i = 1; i < pathPoints.Length; i++) {
+        for (int i = 2; i < pathPoints.Length; i++) {
             //Create new edge 
             //src = previous edge's destination 
             //dst = next point on list
-            Edge e = new Edge(pathEdges.Peek().getDestination(), pathPoints[i]);
+            Edge current = new Edge(previous.getDestination(), pathPoints[i]);
 
-            //Add Edge to list
-            pathEdges.Enqueue(e);
+            //Add Edge to final list
+            pathEdges.Enqueue(current);
+
+            //Set previous to current edge
+            previous = current;
         }
 
         //Return queue of Edges representing the path

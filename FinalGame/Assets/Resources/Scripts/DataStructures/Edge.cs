@@ -15,7 +15,19 @@ public class Edge {
         return source;
     }
 
+    public void setSource(Vector3 source) {
+        this.source = source;
+    }
+
     public Vector3 getDestination() {
         return destination;
+    }
+
+    public void setDestination(Vector3 destination) {
+        this.destination = destination;
+    }
+
+    public string toString() {
+        return "Edge: " + source + ", " + destination;
     }
 }

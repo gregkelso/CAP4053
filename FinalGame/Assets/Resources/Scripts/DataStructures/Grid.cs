@@ -127,4 +127,21 @@ public class Grid {
     public Vector3 getWorldPosition() {
         return worldPosition;
     }
+
+    //Test if there is a clear empty path between two 3d points
+    public bool canWalkBetween(Vector3 src, Vector3 dst) {
+        //Calculate distance and direction
+        float distance = Vector3.Distance(src, dst);
+        Vector3 diff = dst - src;
+        Vector2 direction = new Vector2(diff.x, diff.y);
+
+        //Cast Ray
+        RaycastHit2D hit = Physics2D.Raycast(src, direction, distance, unwalkableMask);
+
+        //If hit an object, return false since can't walk through it
+        if (hit.collider != null) 
+            return false;
+        else
+            return true;
+    }
 }

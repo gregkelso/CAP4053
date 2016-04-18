@@ -904,7 +904,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11435372, guid: c39a2b6cf3c04614eac7875d2854e68f, type: 2}
       propertyPath: debugPath
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11435372, guid: c39a2b6cf3c04614eac7875d2854e68f, type: 2}
       propertyPath: debugGrid

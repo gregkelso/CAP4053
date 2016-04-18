@@ -51,7 +51,7 @@ public class Seek : MonoBehaviour {
             if (path != null) {
                 path.quickSmooth(pathFinder.getGrid()); //Apply basic path smoothener
                 path.pathObj.transform.parent = transform;
-            }
+            }         
 
             //Disable target till next tick
             targetSet = false;
