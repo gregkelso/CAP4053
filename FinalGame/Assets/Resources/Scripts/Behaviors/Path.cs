@@ -163,14 +163,15 @@ public class Path {
             e2.MoveNext(); //e2 points to second edge
             e2.MoveNext();
             Edge destination = pathEdges[pathEdges.Count - 1];
+            Edge e = e1.Current;
 
             //loop as long as e2 dest is not as destination
             while (e2.Current.getDestination() != destination.getDestination()) {
                 //check for obstruction
-                if (grid.canWalkBetween(e1.Current.getSource(), e2.Current.getDestination()) == true) {
+                if (grid.canWalkBetween(e.getSource(), e2.Current.getDestination()) == true) {
                     //Assign edge1 destination the same value as edge2 destination
                     //Convert 2 edges into one
-                    e1.Current.setDestination(e2.Current.getDestination());
+                    e.setDestination(e2.Current.getDestination());
 
                     //Delete edge2 from list
                     smoothened.Remove(e2.Current);
@@ -178,7 +179,7 @@ public class Path {
                 else {
                     //Path is obstructed, keep original edge
                     //Store edge2 as edge1 and fetch new edge to replace edge2 in next iteration
-                    e1 = e2;
+                    e = e2.Current;
                 }
 
                 //Iterate to next edge
