@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System;
-using System.Diagnostics;
 
 //A behavior used to seek a target position
 public class Seek : MonoBehaviour {
@@ -41,43 +40,7 @@ public class Seek : MonoBehaviour {
         if (debugPath == false)
             pathFinder.disableDebug();
         else
-            pathFinder.enableDebug();
-
-        //Check mouse input (Left click)
-        if (Input.GetMouseButtonDown(0)) {
-            //Delete path if one exists
-            if(path != null)
-                path.Destroy();
-
-            //Set mouse click as target destination and generate path 
-            path = pathFinder.findPath(transform.position, getMouseCoordinates());
-
-            //Set parent object if path is available
-            if (path != null) {
-                if(smoothen)
-                    path.quickSmooth(manager.getGrid()); //Apply basic path smoothener
-
-                path.pathObj.transform.parent = transform;
-            }         
-
-            //Disable target till next tick
-            targetSet = false;
-        }
-
-        ////Check mouse input (right click)
-        else if (Input.GetMouseButtonDown(1)) {
-            //If path doesn't exist
-            if (path == null) {
-                //Create and configure a new path
-                path = new Path(debugPath);
-                path.pathObj.transform.parent = transform;
-                path.addNode(transform.position);
-                targetSet = false;
-            }
-
-            //Append clicked node to path
-            path.addNode(getMouseCoordinates());
-        }
+            pathFinder.enableDebug();   
     }
 
     //Return 3D world point based on mouse position
@@ -120,7 +83,7 @@ public class Seek : MonoBehaviour {
                 target = path.peek();
 
                 //Re-engage targeting settings
-                targetSet = true; 
+                targetSet = true;
             }
             catch (Exception) {
                 //Occurs when no waypoints are nearby
@@ -180,4 +143,27 @@ public class Seek : MonoBehaviour {
     public void setArrivalRadius(float radius) {
         this.arrivalRadius = radius;
     }
-}
+
+    //Set a target from current position
+    public void setTarget(Vector3 target) {
+        //Delete path if one exists
+        if (path != null)
+            path.Destroy();
+
+        //Generate path to target
+        path = pathFinder.findPath(transform.position, target);
+
+        //Set parent object if path is available
+        if (path != null) {
+            //Apply basic path smoothener if debug is enabled
+            if (smoothen)
+                path.quickSmooth(manager.getGrid());
+
+            //Set object as parent of path
+            path.pathObj.transform.parent = transform;
+
+            //Disable target till next tick
+            targetSet = false;
+        }
+    }
+}           

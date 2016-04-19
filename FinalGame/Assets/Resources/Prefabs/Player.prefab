@@ -73,9 +73,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6c1be835ea62bc4098e3e8655595d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugRayCaster: 1
+  debugRayCaster: 0
   debugAdjacentSensor: 1
-  debugPieSensor: 1
+  debugPieSensor: 0
 --- !u!212 &21274206
 SpriteRenderer:
   m_ObjectHideFlags: 1
