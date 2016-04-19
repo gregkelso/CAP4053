@@ -1,14 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &126174
+--- !u!1 &100940
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 446118}
-  - 212: {fileID: 21278838}
+  - 4: {fileID: 441162}
+  - 212: {fileID: 21255480}
+  - 114: {fileID: 11445476}
+  - 114: {fileID: 11475950}
+  - 114: {fileID: 11472534}
   m_Layer: 13
   m_Name: Attacker
   m_TagString: Summon
@@ -16,24 +19,69 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &446118
+--- !u!4 &441162
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 126174}
+  m_GameObject: {fileID: 100940}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 42.3, y: 3.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!212 &21278838
+--- !u!114 &11445476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83dd79c81d86c75429a6d489b9d2d843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opponent:
+    serializedVersion: 2
+    m_Bits: 0
+  movementSpeed: 0
+  rotationSpeed: 0
+  heading: 0
+--- !u!114 &11472534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e6a2ced2ba8bc40ae118911b37f29c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  adjacent: {fileID: 0}
+  nearest: {fileID: 0}
+  attacking: 0
+--- !u!114 &11475950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c1be835ea62bc4098e3e8655595d90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugRayCaster: 0
+  debugAdjacentSensor: 1
+  debugPieSensor: 0
+--- !u!212 &21255480
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 126174}
+  m_GameObject: {fileID: 100940}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -64,16 +112,8 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_TagString
-      value: Summon
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Layer
-      value: 13
-      objectReference: {fileID: 0}
+    m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 126174}
+  m_RootGameObject: {fileID: 100940}
   m_IsPrefabParent: 1

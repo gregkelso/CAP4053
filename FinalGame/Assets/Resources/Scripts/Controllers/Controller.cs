@@ -12,7 +12,7 @@ public class Controller : MonoBehaviour {
     public float rotationSpeed;
     public float heading; //Store global heading in degrees
 
-    void Awake() {
+    protected virtual void Awake() {
         //Configure RigidBody 
         rb = gameObject.AddComponent<Rigidbody2D>();
         rb.drag = 10;

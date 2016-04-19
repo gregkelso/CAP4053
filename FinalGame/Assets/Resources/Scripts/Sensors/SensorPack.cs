@@ -21,7 +21,7 @@ public class SensorPack : MonoBehaviour {
     public bool debugAdjacentSensor;
     public bool debugPieSensor;
 
-	void Start () {
+    void Awake() {
         //Obtain controller
         controller = gameObject.GetComponent<Controller>();
 
@@ -29,7 +29,7 @@ public class SensorPack : MonoBehaviour {
         initRayCasters();
         initAASensor();
         initPieSlices();
-	}
+    }
 
     void Update() {     
         debugAdjacent(debugAdjacentSensor);

@@ -4,12 +4,16 @@
 public class PlayerController : Controller {
     //Global Variables
 
-    //Initialize controller and parent
-    protected override void Start() {
-        base.Start();
+    protected override void Awake() {
+        base.Awake();
 
         //SetOpponent - Used in sensors
         setOpponent(1 << LayerMask.NameToLayer("Enemies"));
+    }
+
+    //Initialize controller and parent
+    protected override void Start() {
+        base.Start();
     }
 
     //Update is called once per frame
