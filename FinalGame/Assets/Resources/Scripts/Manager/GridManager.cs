@@ -6,17 +6,19 @@ public class GridManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        float nodeRadius = 10;
+        float nodeRadius = 20;
         LayerMask mask = 1 << LayerMask.NameToLayer("Obstacles");
         grid = new Grid(Vector3.zero, gameObject.transform.localScale, nodeRadius, mask);
-    }
 
-    // Update is called once per frame
-    void Update () {
-        grid.generate();
-	}
+        //Invoke Function to regenerate grid once per second
+        InvokeRepeating("regenerate", 0, 1);
+    }
 
     public Grid getGrid() {
         return grid;
+    }
+
+    void regenerate() {
+        grid.generate();
     }
 }

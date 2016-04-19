@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugRayCaster: 0
-  debugAdjacentSensor: 1
+  debugAdjacentSensor: 0
   debugPieSensor: 0
 --- !u!212 &21274206
 SpriteRenderer:

@@ -11,6 +11,7 @@ TagManager:
   - Effect
   - Debug
   - Waypoint
+  - Spawners
   layers:
   - Default
   - TransparentFX
@@ -27,8 +28,8 @@ TagManager:
   - Waypoints
   - Summons
   - Debug
-  - Effect
-  - 
+  - Effects
+  - Spawners
   - 
   - 
   - 

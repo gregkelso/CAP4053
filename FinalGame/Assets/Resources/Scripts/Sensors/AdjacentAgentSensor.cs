@@ -7,21 +7,21 @@ public class AdjacentAgentSensor : Sensor {
     //PRIVATE 
 
     //PUBLIC
-    private GameObject circle;
+    private static GameObject circlePrefab;
     public GameObject visualRadius;
     public float radius;
     public bool debug;
     public AdjacentData[] values;
     public LayerMask mask; //Layer in which the sensor acts on
 
-    //Initialize Defaults
+    protected void Awake() {
+        circlePrefab = Resources.Load<GameObject>("Prefabs/Circle");
+    }
+
+    //Initialize Default
     protected override void Start() {
         //Call Parent start 
         base.Start();
-
-        circle = Resources.Load<GameObject>("Prefabs/Circle");
-
-        initializeCircle();
     }
 
     //Update each frame
@@ -84,7 +84,7 @@ public class AdjacentAgentSensor : Sensor {
 
     //Instantiate and Initialize Circle
     private void initializeCircle() {     
-        visualRadius = Instantiate(circle) as GameObject; //Create based on prefab
+        visualRadius = Instantiate(circlePrefab) as GameObject; //Create based on prefab
         visualRadius.transform.parent = obj.transform; //Set obj as circle's parent   
         visualRadius.transform.localPosition = Vector3.zero;   
         resizeCircle(); //Resize Circle arround object to match radius
@@ -92,14 +92,17 @@ public class AdjacentAgentSensor : Sensor {
 
     //Remove Circle from object
     private void removeCircle() {
-        visualRadius.transform.parent = null; //Unparent circle from object
-        Destroy(visualRadius);
+        if (visualRadius != null) {
+            visualRadius.transform.parent = null; //Unparent circle from object
+            Destroy(visualRadius);
+        }
     }
 
     private void resizeCircle() {
         //Set circle scale based on radius
         try {
-            visualRadius.transform.localScale = new Vector3(radius / 100, radius / 100, 0);
+            if(visualRadius != null)
+                visualRadius.transform.localScale = new Vector3(radius / 100, radius / 100, 0);
         }
         catch(Exception) {
 
@@ -108,7 +111,18 @@ public class AdjacentAgentSensor : Sensor {
 
     public void setDebug(bool debug) {
         this.debug = debug;
-        visualRadius.SetActive(debug);
+
+        try {
+            if (debug) {
+                if(visualRadius == null)
+                    initializeCircle();
+            }
+            else
+                removeCircle();
+        }
+        catch(Exception ex) {
+            Debug.Log(ex.ToString());
+        }
     }
 }
 
