@@ -34,12 +34,16 @@ public class SummonManager : MonoBehaviour {
 	
 	}
 
-    public GameObject createAttacker() {
+    public GameObject createAttacker(float heading) {
         //Instantiate Attacker
         GameObject obj = Instantiate<GameObject>(attacker);
         obj.transform.parent = summons.transform;
         obj.transform.localPosition = transform.position;
-        obj.GetComponent<SummonController>().setSummonType(SummonType.ATTACKER);
+
+        //Configure attackers controller
+        SummonController controller = obj.GetComponent<SummonController>();
+        controller.setSummonType(SummonType.ATTACKER);
+        controller.setHeading(heading);
 
         //Add to list
         attackers.Add(obj);
@@ -48,11 +52,15 @@ public class SummonManager : MonoBehaviour {
         return obj;
     }
 
-    public GameObject createDefender() {
+    public GameObject createDefender(float heading) {
         //Instantiate Defender
         GameObject obj = Instantiate<GameObject>(defender);
         obj.transform.parent = transform;
-        obj.GetComponent<SummonController>().setSummonType(SummonType.DEFENDER);
+
+        //Configure attackers controller
+        SummonController controller = obj.GetComponent<SummonController>();
+        controller.setSummonType(SummonType.DEFENDER);
+        controller.setHeading(heading);
 
         //Add to list
         defenders.Add(obj);
@@ -61,12 +69,16 @@ public class SummonManager : MonoBehaviour {
         return obj;
     }
 
-    public GameObject createBomber() {
+    public GameObject createBomber(float heading) {
         //Instantiate Bomber
         GameObject obj = Instantiate<GameObject>(bomber);
         obj.transform.parent = summons.transform;
         obj.transform.localPosition = transform.position;
-        obj.GetComponent<SummonController>().setSummonType(SummonType.BOMBER);
+
+        //Configure attackers controller
+        SummonController controller = obj.GetComponent<SummonController>();
+        controller.setSummonType(SummonType.BOMBER);
+        controller.setHeading(heading);
 
         //Add to list 
         bombers.Add(obj);
@@ -76,13 +88,16 @@ public class SummonManager : MonoBehaviour {
     }
 
     public void destroySummon(GameObject obj, SummonType type) {
-        if(type == SummonType.ATTACKER) {
-            Destroy(obj);
-        }
-        else if(type == SummonType.DEFENDER) {
-            Destroy(obj);
-        }
-        else if(type == SummonType.BOMBER) {
+        if(obj != null) {
+            //Remove from list
+            if (type == SummonType.ATTACKER) 
+                attackers.Remove(obj);
+            else if (type == SummonType.DEFENDER) 
+                defenders.Remove(obj);
+            else if (type == SummonType.BOMBER) 
+                bombers.Remove(obj);
+
+            //Destroy game object
             Destroy(obj);
         }
     }

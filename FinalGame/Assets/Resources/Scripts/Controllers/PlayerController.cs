@@ -48,17 +48,17 @@ public class PlayerController : Controller {
         //Summon Key
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
             //Instantiate Attacker
-            summoner.createAttacker();
+            summoner.createAttacker(getHeading());
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2)) {
             //Instantiate Defender
-            summoner.createDefender();
+            summoner.createDefender(getHeading());
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3)) {
             //Instantiate Bomber
-            summoner.createBomber();
+            summoner.createBomber(getHeading());
         }
     }
 }
