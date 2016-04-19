@@ -51,7 +51,7 @@ public class PlayerController : Controller {
             rotateRight();
 
 
-        //Summon Keys
+        //Summon Key
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
             //Instantiate Attacker
             GameObject obj = Instantiate<GameObject>(attacker);
