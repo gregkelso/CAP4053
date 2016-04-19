@@ -53,7 +53,7 @@ public class PlayerController : Controller {
 
         if (Input.GetKeyDown(KeyCode.Alpha2)) {
             //Instantiate Defender
-            summoner.createDefender(getHeading());
+            summoner.createDefender(getDirectionRadians());
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3)) {

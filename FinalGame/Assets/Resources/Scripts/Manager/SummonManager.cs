@@ -52,15 +52,16 @@ public class SummonManager : MonoBehaviour {
         return obj;
     }
 
-    public GameObject createDefender(float heading) {
+    public GameObject createDefender(Vector3 heading) {
         //Instantiate Defender
         GameObject obj = Instantiate<GameObject>(defender);
-        obj.transform.parent = transform;
+        //obj.transform.parent = summons.transform; //parented by summons folder
+        obj.transform.parent = transform; //parented by player
+        obj.transform.localPosition = heading * 100f;
 
         //Configure attackers controller
         SummonController controller = obj.GetComponent<SummonController>();
         controller.setSummonType(SummonType.DEFENDER);
-        controller.setHeading(heading);
 
         //Add to list
         defenders.Add(obj);
@@ -75,7 +76,7 @@ public class SummonManager : MonoBehaviour {
         obj.transform.parent = summons.transform;
         obj.transform.localPosition = transform.position;
 
-        //Configure attackers controller
+        //Configure bomber controller
         SummonController controller = obj.GetComponent<SummonController>();
         controller.setSummonType(SummonType.BOMBER);
         controller.setHeading(heading);

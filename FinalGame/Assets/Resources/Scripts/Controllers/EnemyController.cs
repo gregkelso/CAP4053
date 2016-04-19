@@ -30,7 +30,6 @@ public class EnemyController : Controller {
             Destroy(other.gameObject);
 
             //Signal to restart game
-            Debug.Log("GameOver");
             SceneManager.LoadScene("GameStagingScene");
         }
         else if(other.gameObject.tag == "Summon") {

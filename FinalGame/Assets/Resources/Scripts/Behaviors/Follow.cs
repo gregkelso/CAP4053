@@ -13,8 +13,8 @@ public class Follow : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        float initialDelay = Random.Range(0, 5); 
-        float delay = Random.Range(1, 5);
+        float initialDelay = Random.Range(0, 2); 
+        float delay = Random.Range(1, 3);
         InvokeRepeating("RepeatingFunction", initialDelay, delay);
     }
 
