@@ -7,7 +7,6 @@ public class PieSliceSensor : Sensor {
     private float radius;
 
     //PUBLIC
-    public string id;
     public float firstAngle;
     public float secondAngle;
     public bool debug;
@@ -82,4 +81,8 @@ public class PieSliceSensor : Sensor {
 	public void setSecondAngle(float secondAngle) {
 		this.secondAngle = secondAngle;
 	}
+
+    public void setDebug(bool debug) {
+        this.debug = debug;
+    }
 }

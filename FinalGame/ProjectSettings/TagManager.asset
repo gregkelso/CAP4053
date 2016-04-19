@@ -7,6 +7,10 @@ TagManager:
   - Enemy
   - Environment
   - Obstacle
+  - Summon
+  - Effect
+  - Debug
+  - Waypoint
   layers:
   - Default
   - TransparentFX
@@ -21,9 +25,9 @@ TagManager:
   - Enemies
   - Environment
   - Waypoints
-  - 
-  - 
-  - 
+  - Summons
+  - Debug
+  - Effect
   - 
   - 
   - 
@@ -53,6 +57,9 @@ TagManager:
   - name: Obstacles
     uniqueID: 2851901817
     locked: 0
-  - name: 
+  - name: Debug
     uniqueID: 4188684863
+    locked: 0
+  - name: Effect
+    uniqueID: 4015473643
     locked: 0

@@ -5,6 +5,7 @@ public class Controller : MonoBehaviour {
     //Global Variables
     //PRIVATE
     protected Rigidbody2D rb; //Allow physics on agent
+    public LayerMask opponent;
 
     //PUBLIC
     public float movementSpeed; 
@@ -116,5 +117,13 @@ public class Controller : MonoBehaviour {
 
         //Return Relative angle
         return relativeHeading;
+    }
+
+    public LayerMask getOpponent() {
+        return opponent;
+    }
+
+    public void setOpponent(LayerMask opponent) {
+        this.opponent = opponent;
     }
 }

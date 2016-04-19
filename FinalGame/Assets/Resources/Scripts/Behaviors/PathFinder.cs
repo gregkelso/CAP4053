@@ -4,22 +4,19 @@ using System.Diagnostics;
 
 //PathFinding Behavior which implements A* Algorithm to steer an agent from one location to another 
 public class PathFinder {
-    private Grid grid; //Grid used to generate path
+    GridManager manager;
     private bool debug;
 
     //Initialize Path Finder
-    public PathFinder(float nodeRadius, LayerMask mask) {
-        //Configure path finder
-        Vector3 bgScale = GameObject.Find("Background").transform.localScale; //Obtain Background Size to calibrate grid
-        Vector2 worldSize = new Vector2(bgScale.x, bgScale.y);
-        
-        //Initialize Grid
-        grid = new Grid(Vector3.zero, worldSize, nodeRadius, mask);
-        debug = false;
+    public PathFinder(GridManager manager) {
+        this.manager = manager;       
     }
 
     //Generate path from start to destination using A*
     public Path findPath(Vector3 startPos, Vector3 targetPos) {
+        //Obtain most recent grid
+        Grid grid = manager.getGrid();
+
         //Convert 3D Positions to GridNodes
         GridNode startNode = grid.getNode(startPos);
         GridNode targetNode = grid.getNode(targetPos);
@@ -107,11 +104,6 @@ public class PathFinder {
 
         //Return Path
         return path;
-    }
-
-    //Return reference of pathfinding grid
-    public Grid getGrid() {
-        return grid;
     }
 
     public void enableDebug() {

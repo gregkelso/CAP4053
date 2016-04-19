@@ -4,15 +4,13 @@
 public class RayCaster : Sensor {
     //Global Variables
     //PUBLIC
-    public string id; //Used to identify ray caster
     public float angle; //Angle offsetted from agent rotation
     public float rayDistance; //Max distance of ray
     public bool debug; //Draw debug line
     public float value; //Store distance value of ray
 
     //PRIVATE
-    private int obstacleLayer = 9;
-    private int layerMask;
+    private LayerMask layerMask;
 
     //Initialize Defaults
     protected override void Start() {
@@ -20,7 +18,7 @@ public class RayCaster : Sensor {
         base.Start();
 
         //Configure
-        layerMask = 1 << obstacleLayer;
+        layerMask = 1 << LayerMask.NameToLayer("Obstacles");
     }
 
     void Update() {
@@ -76,6 +74,14 @@ public class RayCaster : Sensor {
 
     public float getValue() {
         return value;
+    }
+
+    public void setLayerMask(LayerMask mask) {
+        layerMask = mask;
+    }
+
+    public LayerMask getLayerMask() {
+        return layerMask;
     }
 }
 

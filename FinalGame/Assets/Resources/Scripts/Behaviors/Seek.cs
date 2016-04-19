@@ -6,28 +6,32 @@ using System.Diagnostics;
 public class Seek : MonoBehaviour {
     //PRIVATE
     private Controller controller; //Allows full control of agent
-    
+
     //PUBLIC
-    public bool debugGrid; //Displays grid debug
-    public bool debugPath; //Display visual debug path
+    public GridManager manager;
     public bool targetSet; //While true, agent is currently seeking to destination
     public float arrivalRadius = 25; //How close to target till considered arrived at target
     public Vector3 target; //Specific Target node to face and move to
     public PathFinder pathFinder; //Calculate path from start to goal
     public Path path; //Store a path created from path finder or manually placed points
 
+    //Debug flags
+    public bool debugGrid; //Displays grid debug
+    public bool debugPath; //Display visual debug path
+    public bool smoothen; //Toggle path smoothening feature
+
     // Use this for initialization
-    void Start () {    
+    void Start () {
+        manager = GameObject.Find("Background").GetComponent<GridManager>(); 
         controller = GetComponent<Controller>(); //Obtain agent controller for movement
-        LayerMask mask = 1 << 9; //Consider obstacles non-traversable
-        pathFinder = new PathFinder(10, mask); //Initialize PathFinder
+        pathFinder = new PathFinder(manager); //Initialize PathFinder
         targetSet = false; //A target hasn't been selected
+        smoothen = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         checkInput(); //Handle User input
-        pathFinder.getGrid().generate(); //Regenerate grid
         seek(); //Seek target destination based on path selected
     }
 
@@ -50,7 +54,9 @@ public class Seek : MonoBehaviour {
 
             //Set parent object if path is available
             if (path != null) {
-                path.quickSmooth(pathFinder.getGrid()); //Apply basic path smoothener
+                if(smoothen)
+                    path.quickSmooth(manager.getGrid()); //Apply basic path smoothener
+
                 path.pathObj.transform.parent = transform;
             }         
 
@@ -144,7 +150,7 @@ public class Seek : MonoBehaviour {
         //Only draw if available and enabled
         if (pathFinder != null && debugGrid == true) {
             //Obtain grid reference
-            Grid grid = pathFinder.getGrid();
+            Grid grid = manager.getGrid();
 
             //Draw outline
             Gizmos.DrawWireCube(grid.getWorldPosition(), new Vector3(grid.getWorldSize().x, grid.getWorldSize().y, 0));

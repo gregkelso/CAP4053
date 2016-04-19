@@ -3,13 +3,13 @@
 //Basic player controller
 public class PlayerController : Controller {
     //Global Variables
-    //PRIVATE
 
-    //PUBLIC
-    
     //Initialize controller and parent
     protected override void Start() {
         base.Start();
+
+        //SetOpponent - Used in sensors
+        setOpponent(1 << LayerMask.NameToLayer("Enemies"));
     }
 
     //Update is called once per frame
@@ -19,13 +19,13 @@ public class PlayerController : Controller {
     }
 
     //Process keyboard input
-	void processInput() {
+    void processInput() {
         //Up Arrow
-		if (Input.GetKey(KeyCode.UpArrow)) 
+        if (Input.GetKey(KeyCode.UpArrow))
             moveForward();
 
         //Down Arrow
-		if (Input.GetKey(KeyCode.DownArrow)) 
+        if (Input.GetKey(KeyCode.DownArrow))
             moveBackward();
 
         //Left Arrow
@@ -33,7 +33,7 @@ public class PlayerController : Controller {
             rotateLeft();
 
         //Right Arrow
-        if (Input.GetKey(KeyCode.RightArrow)) 
+        if (Input.GetKey(KeyCode.RightArrow))
             rotateRight();
-	}
+    }
 }

@@ -4,13 +4,16 @@ using System.Collections.Generic;
 //Store and manipulate a grid of gridNodes used in pathfinding A*
 public class Grid {
     private GridNode[,] grid; //2D Array of gridNodes which represent the grid
+
+    //Grid Configuration
     private Vector3 worldPosition; //Location of the center of the grid in world space
-    private Vector2 worldSize; //Size of the grid in pixels
+    private Vector3 worldSize; //Size of the grid in pixels
     private Point gridSize; //Dimension of grid in units
     private float nodeRadius; //Size of each node in the grid
     private float nodeDiameter; //Diameter of each node in the grid
-    private LayerMask unwalkableMask; //Specifies layers considered while generating grid
     private Vector3 bottomLeft; //Store bottom left corner of grid in 3d world points
+
+    private LayerMask unwalkableMask; //Specifies layers considered while generating grid
 
     //Return maximum number of nodes (used to create heap)
     public int MaxSize {
@@ -18,7 +21,7 @@ public class Grid {
     }
 
     //Instantiate a grid
-    public Grid(Vector3 worldPosition, Vector2 worldSize, float nodeRadius, LayerMask unwalkableMask) {
+    public Grid(Vector3 worldPosition, Vector3 worldSize, float nodeRadius, LayerMask unwalkableMask) {
         //Store values      
         this.worldPosition = worldPosition;
         this.worldSize = worldSize;
