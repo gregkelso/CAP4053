@@ -84,7 +84,7 @@ public class AdjacentAgentSensor : Sensor {
 
     //Instantiate and Initialize Circle
     private void initializeCircle() {     
-        visualRadius = Instantiate(circlePrefab) as GameObject; //Create based on prefab
+        visualRadius = Instantiate<GameObject>(circlePrefab); //Create based on prefab
         visualRadius.transform.parent = obj.transform; //Set obj as circle's parent   
         visualRadius.transform.localPosition = Vector3.zero;   
         resizeCircle(); //Resize Circle arround object to match radius

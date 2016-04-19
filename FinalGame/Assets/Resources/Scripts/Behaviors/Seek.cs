@@ -9,7 +9,7 @@ public class Seek : MonoBehaviour {
     //PUBLIC
     public GridManager manager;
     public bool targetSet; //While true, agent is currently seeking to destination
-    public float arrivalRadius = 25; //How close to target till considered arrived at target
+    public float arrivalRadius = 20; //How close to target till considered arrived at target
     public Vector3 target; //Specific Target node to face and move to
     public PathFinder pathFinder; //Calculate path from start to goal
     public Path path; //Store a path created from path finder or manually placed points

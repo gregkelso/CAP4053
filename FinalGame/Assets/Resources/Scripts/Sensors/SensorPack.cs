@@ -23,8 +23,10 @@ public class SensorPack : MonoBehaviour {
 
     void Awake() {
         //Obtain controller
-        controller = gameObject.GetComponent<Controller>();
+        controller = gameObject.GetComponent<Controller>();  
+    }
 
+    void Start() {
         //Init & config
         initRayCasters();
         initAASensor();

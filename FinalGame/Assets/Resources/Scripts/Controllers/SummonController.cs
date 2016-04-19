@@ -20,4 +20,14 @@ public class SummonController : Controller
     protected override void Update() {
         base.Update(); //Call parent update
     }
+
+    void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.tag == "Enemy") {
+            //Destroy self
+            Destroy(other.gameObject);
+
+            //Destroy enemy
+            Destroy(gameObject);
+        }
+    }
 }

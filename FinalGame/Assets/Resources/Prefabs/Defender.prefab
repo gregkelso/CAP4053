@@ -9,6 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 471652}
   - 212: {fileID: 21285130}
+  - 61: {fileID: 6168892}
+  - 114: {fileID: 11453466}
+  - 114: {fileID: 11439770}
   m_Layer: 13
   m_Name: Defender
   m_TagString: Summon
@@ -28,6 +31,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!61 &6168892
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177010}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 28, y: 37}
+--- !u!114 &11439770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c1be835ea62bc4098e3e8655595d90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugRayCaster: 0
+  debugAdjacentSensor: 0
+  debugPieSensor: 0
+--- !u!114 &11453466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83dd79c81d86c75429a6d489b9d2d843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opponent:
+    serializedVersion: 2
+    m_Bits: 1024
+  movementSpeed: 250000
+  rotationSpeed: 250
+  heading: 0
 --- !u!212 &21285130
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -72,6 +120,26 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Layer
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.x
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.y
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: movementSpeed
+      value: 250000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: rotationSpeed
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: opponent.m_Bits
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

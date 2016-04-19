@@ -35,13 +35,15 @@ public class Attack : MonoBehaviour {
             }
 
             //Attack enemy
-            if(attacking == false)
+            if (attacking == false && nearest.gameObject != null) {
                 seek.setTarget(nearest.transform.position);
+                attacking = true;
+            }
         }
 	}
 
     void attack() {
-        if(attacking)
+        if (attacking && nearest.gameObject != null)
             seek.setTarget(nearest.transform.position);
     }
 }
