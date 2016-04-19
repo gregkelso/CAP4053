@@ -4,6 +4,9 @@ using System.Collections;
 //Basic Enemy Controller
 public class SummonController : Controller
 {
+    private SummonManager summoner;
+    private SummonType type;
+
     protected override void Awake() {
         base.Awake();
 
@@ -14,6 +17,8 @@ public class SummonController : Controller
     //Initialize controller and parent
     protected override void Start() {
         base.Start();
+
+        summoner = GameObject.Find("Player").GetComponent<SummonManager>();
     }
 
     //Update is called once per frame
@@ -21,13 +26,15 @@ public class SummonController : Controller
         base.Update(); //Call parent update
     }
 
-    void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.tag == "Enemy") {
-            //Destroy self
-            Destroy(other.gameObject);
+    public SummonType getSummonType() {
+        return type;
+    }
 
-            //Destroy enemy
-            Destroy(gameObject);
-        }
+    public void setSummonType(SummonType type) {
+        this.type = type;
+    }
+
+    public void destroy() {
+        summoner.destroySummon(gameObject, type);
     }
 }

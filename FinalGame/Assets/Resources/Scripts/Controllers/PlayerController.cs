@@ -2,23 +2,17 @@
 
 //Basic player controller
 public class PlayerController : Controller {
-    //Global Variables
-    private static GameObject summons; //Gameobject parent of all summons
-    private static GameObject attacker;
-    private static GameObject defender;
-    private static GameObject bomber;
+    //Global Variables    
+    private SummonManager summoner;
 
     protected override void Awake() {
         base.Awake();
 
-        //SetOpponent - Used in sensors
-        setOpponent(1 << LayerMask.NameToLayer("Enemies"));
+        //Add summon manager
+        summoner = gameObject.AddComponent<SummonManager>();
 
-        //Get Objects and load prefabs
-        summons = GameObject.Find("Summons"); 
-        attacker = Resources.Load<GameObject>("Prefabs/Attacker");
-        defender = Resources.Load<GameObject>("Prefabs/Defender");
-        bomber = Resources.Load<GameObject>("Prefabs/Bomber");
+        //SetOpponent - Used in sensors
+        setOpponent(1 << LayerMask.NameToLayer("Enemies"));  
     }
 
     //Initialize controller and parent
@@ -54,23 +48,17 @@ public class PlayerController : Controller {
         //Summon Key
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
             //Instantiate Attacker
-            GameObject obj = Instantiate<GameObject>(attacker);
-            obj.transform.parent = summons.transform;   
-            obj.transform.localPosition = transform.position;
+            summoner.createAttacker();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2)) {
             //Instantiate Defender
-            GameObject obj = Instantiate<GameObject>(defender);
-            obj.transform.parent = summons.transform;
-            obj.transform.localPosition = transform.position;
+            summoner.createDefender();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3)) {
             //Instantiate Bomber
-            GameObject obj = Instantiate<GameObject>(bomber);
-            obj.transform.parent = summons.transform;
-            obj.transform.localPosition = transform.position;
+            summoner.createBomber();
         }
     }
 }

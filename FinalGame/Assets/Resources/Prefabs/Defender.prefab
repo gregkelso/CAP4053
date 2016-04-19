@@ -12,6 +12,7 @@ GameObject:
   - 61: {fileID: 6168892}
   - 114: {fileID: 11453466}
   - 114: {fileID: 11439770}
+  - 114: {fileID: 11481818}
   m_Layer: 13
   m_Name: Defender
   m_TagString: Summon
@@ -76,6 +77,18 @@ MonoBehaviour:
   movementSpeed: 250000
   rotationSpeed: 250
   heading: 0
+--- !u!114 &11481818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177010}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90b291b0f5a10ff4f8c3dbaf68b58ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defendRadius: 20
 --- !u!212 &21285130
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -140,6 +153,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: opponent.m_Bits
       value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -12,6 +12,7 @@ GameObject:
   - 61: {fileID: 6168228}
   - 114: {fileID: 11440898}
   - 114: {fileID: 11475738}
+  - 114: {fileID: 11492312}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -76,6 +77,20 @@ MonoBehaviour:
   debugRayCaster: 0
   debugAdjacentSensor: 0
   debugPieSensor: 0
+--- !u!114 &11492312
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f5a38e1f159fbd4383b4aa90871bb71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackers: []
+  defenders: []
+  bombers: []
 --- !u!212 &21274206
 SpriteRenderer:
   m_ObjectHideFlags: 1
