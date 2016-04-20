@@ -25,7 +25,8 @@ public class Seek : MonoBehaviour {
         controller = GetComponent<Controller>(); //Obtain agent controller for movement
         pathFinder = new PathFinder(manager); //Initialize PathFinder
         targetSet = false; //A target hasn't been selected
-        smoothen = true;
+        //debugPath = true;
+        //smoothen = true;
 	}
 	
 	// Update is called once per frame
@@ -36,11 +37,13 @@ public class Seek : MonoBehaviour {
 
     //Check for and process user input
     private void checkInput() {
-        //Trigger debug display
-        if (debugPath == false)
-            pathFinder.disableDebug();
-        else
-            pathFinder.enableDebug();   
+        if (pathFinder != null) {
+            //Trigger debug display
+            if (debugPath == false)
+                pathFinder.disableDebug();
+            else
+                pathFinder.enableDebug();
+        }   
     }
 
     //Return 3D world point based on mouse position
@@ -165,5 +168,17 @@ public class Seek : MonoBehaviour {
             //Disable target till next tick
             targetSet = false;
         }
+    }
+
+    public void setDebug(bool debugGrid, bool debugPath, bool smoothen) {
+        this.debugGrid = debugGrid;
+        this.debugPath = debugPath;
+        this.smoothen = smoothen;
+
+        checkInput();
+    }
+
+    public Path getPath() {
+        return path;
     }
 }           

@@ -34,10 +34,16 @@ public class EnemyController : Controller {
         }
         else if(other.gameObject.tag == "Summon") {
             //Destroy self
-            Destroy(gameObject);
+            //if (gameObject != null ) {
+                Path p = gameObject.GetComponent<Seek>().getPath();
+                if (p != null)
+                    p.Destroy();
 
-            //Destroy other - through manager
-            other.gameObject.GetComponent<SummonController>().destroy();
+                Destroy(gameObject);
+
+                //Destroy other - through manager
+                other.gameObject.GetComponent<SummonController>().destroy();
+            //}
         }
     }
 }

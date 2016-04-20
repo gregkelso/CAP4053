@@ -58,6 +58,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  debugGrid: 0
+  debugPath: 1
+  smoothen: 1
 --- !u!114 &11451874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -182,6 +185,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: debugGrid
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: debugPath
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: smoothen
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
