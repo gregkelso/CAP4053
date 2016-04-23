@@ -6,11 +6,17 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour {
 
 	public GameObject PauseUI;
+	public Text scoreText;
+	public float timeElapsed = 0.0f;
+	public float bestTime = 0.0f;
 
 	private bool paused = false;
+	//private TimeController timeController;
 
 	void Start() {
 		PauseUI.SetActive (false);
+		timeElapsed = 0.0f;
+		//timeController = GetComponent<TimeController> ();
 	}
 
 	void Update() {
@@ -24,7 +30,11 @@ public class UIController : MonoBehaviour {
 		if (!paused) {
 			PauseUI.SetActive (false);
 			Time.timeScale = 1;
+			//timeController.ManipulateTime (1, 1f);
 		}
+
+		scoreText.text = "TIME: " + FormatTime (timeElapsed) + "\nBEST: " + FormatTime (bestTime);
+		timeElapsed += Time.deltaTime;
 	}
 
 	public void ResumeGame() {
@@ -38,5 +48,12 @@ public class UIController : MonoBehaviour {
 
 	public void QuitGame() {
 		Application.Quit ();
+	}
+
+	public string FormatTime(float value) {
+		int minutes = (int)(Mathf.Floor (value / 60));
+		int seconds = (int)(Mathf.Floor (value % 60));
+
+		return string.Format ("{0:D2} : {1:D2}", minutes, seconds);
 	}
 }   
