@@ -1,0 +1,2360 @@
+fileFormatVersion: 2
+guid: 7314f7430c615774dafd9cd0afc708ed
+labels:
+- Effect
+timeCreated: 1461445743
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: attackmagic1
+    21300002: attackmagic2
+    21300004: attackmagic3
+    21300006: attackmagic4
+    21300008: attackmagic5
+    21300010: attackmagic6
+    21300012: attackmagic7
+    21300014: attackmagic8
+    21300016: attackmagic9
+    21300018: attackmagic10
+    21300020: attackmagic11
+    21300022: attackmagic12
+    21300024: attackmagic13
+    21300026: attackmagic14
+    21300028: attackmagic15
+    21300030: attackmagic16
+    21300032: attackmagic20
+    21300034: attackmagic21
+    21300036: attackmagic22
+    21300038: attackmagic17
+    21300040: attackmagic18
+    21300042: attackmagic19
+    21300044: staff1
+    21300046: staff2
+    21300048: staff3
+    21300050: attacksword14
+    21300052: attacksword1
+    21300054: attacksword2
+    21300056: attacksword3
+    21300058: attacksword4
+    21300060: attacksword5
+    21300062: attacksword6
+    21300064: attacksword7
+    21300066: attacksword8
+    21300068: attacksword9
+    21300070: attacksword10
+    21300072: attacksword11
+    21300074: attacksword12
+    21300076: attacksword13
+    21300078: attacksword15
+    21300080: attacksword16
+    21300082: attacksword17
+    21300084: attacksword18
+    21300086: attacksword19
+    21300088: attacksword20
+    21300090: attacksword21
+    21300092: attacksword22
+    21300094: attacksword23
+    21300096: attacksword24
+    21300098: attacksword25
+    21300100: attacksword26
+    21300102: attacksword27
+    21300104: attacksword28
+    21300106: attacksword29
+    21300108: staffdodge1
+    21300110: staffdodge2
+    21300112: dodge1
+    21300114: dodge2
+    21300116: dodge3
+    21300118: dodge4
+    21300120: icemagic3
+    21300122: icemagic4
+    21300124: icemagic5
+    21300126: icemagic6
+    21300128: icemagic7
+    21300130: firemagic1
+    21300132: firemagic2
+    21300134: firemagic3
+    21300136: firemagic4
+    21300138: firemagic5
+    21300140: firemagic6
+    21300142: firemagic7
+    21300144: firemagic8
+    21300146: icemagic8
+    21300148: icemagic9
+    21300150: thundermagic2
+    21300152: thundermagic3
+    21300154: thundermagic4
+    21300156: thundermagic5
+    21300158: thundermagic6
+    21300160: thundermagic7
+    21300162: criticalmagic1
+    21300164: criticalmagic2
+    21300166: criticalmagic3
+    21300168: criticalmagic4
+    21300170: criticalmagic5
+    21300172: criticalmagic6
+    21300174: criticalmagic7
+    21300176: criticalmagic8
+    21300178: criticalmagic9
+    21300180: redmage_257
+    21300182: criticalmagic10
+    21300184: criticalmagic11
+    21300186: criticalmagic12
+    21300188: thundermagic1
+    21300190: thundermagic8
+    21300192: redmage_263
+    21300194: criticalmagic13
+    21300196: criticalmagic14
+    21300198: criticalmagic15
+    21300200: redmage_277
+    21300202: criticalmagic16
+    21300204: redmage_279
+    21300206: criticalmagic17
+    21300208: criticalmagic18
+    21300210: criticalmagic19
+    21300212: criticalmagic20
+    21300214: criticalmagic21
+    21300216: criticalmagic22
+    21300218: criticalmagic23
+    21300220: criticalsword1
+    21300222: criticalsword2
+    21300224: criticalsword3
+    21300226: criticalsword4
+    21300228: criticalsword5
+    21300230: criticalsword6
+    21300232: criticalsword7
+    21300234: criticalsword8
+    21300236: criticalsword9
+    21300238: criticalsword10
+    21300240: criticalsword11
+    21300242: criticalsword12
+    21300244: criticalsword13
+    21300246: criticalsword14
+    21300248: criticalsword15
+    21300250: criticalsword16
+    21300252: criticalsword17
+    21300254: criticalsword18
+    21300256: criticalsword19
+    21300258: criticalsword20
+    21300260: criticalsword21
+    21300262: criticalsword22
+    21300264: redmage_309
+    21300266: criticalsword23
+    21300268: criticalsword24
+    21300270: criticalsword25
+    21300272: criticalsword26
+    21300274: redmage_314
+    21300276: criticalsword28
+    21300278: criticalsword29
+    21300280: criticalsword30
+    21300282: criticalsword31
+    21300284: criticalsword32
+    21300286: criticalsword33
+    21300288: criticalsword34
+    21300290: criticalsword35
+    21300292: criticalsword36
+    21300294: criticalsword37
+    21300296: attackmagic23
+    21300298: icemagic1
+    21300300: icemagic2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -5
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 0.75
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: attackmagic1
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 549
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attackmagic2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 549
+        width: 24
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attackmagic3
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 548
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attackmagic4
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 548
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attackmagic5
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 548
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attackmagic6
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 548
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attackmagic7
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 548
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attackmagic8
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 548
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attackmagic9
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 547
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 19}
+        - {x: -16.5, y: 13}
+        - {x: -16.5, y: -15}
+        - {x: -15.5, y: -19}
+        - {x: 15.5, y: -19}
+        - {x: 16.5, y: -11}
+        - {x: 16.5, y: 9}
+        - {x: 5.5, y: 19}
+    - name: attackmagic10
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 547
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 19}
+        - {x: -17, y: 14}
+        - {x: -17, y: -15}
+        - {x: -16, y: -19}
+        - {x: 15, y: -19}
+        - {x: 17, y: -10}
+        - {x: 17, y: 12}
+        - {x: 6, y: 19}
+    - name: attackmagic11
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 547
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 19}
+        - {x: -17, y: 15}
+        - {x: -17, y: -19}
+        - {x: 14, y: -19}
+        - {x: 17, y: -7}
+        - {x: 17, y: 12}
+        - {x: 9, y: 19}
+    - name: attackmagic12
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 547
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 19}
+        - {x: -16.5, y: 17}
+        - {x: -16.5, y: -19}
+        - {x: 16.5, y: -19}
+        - {x: 16.5, y: 18}
+        - {x: 13.5, y: 19}
+    - name: attackmagic13
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 547
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 19}
+        - {x: -17, y: 13}
+        - {x: -17, y: -15}
+        - {x: -16, y: -19}
+        - {x: 15, y: -19}
+        - {x: 17, y: -9}
+        - {x: 17, y: 11}
+        - {x: 5, y: 19}
+    - name: attackmagic14
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 498
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 19}
+        - {x: -11, y: 19}
+        - {x: -16, y: 15}
+        - {x: -16, y: -12}
+        - {x: -15, y: -18}
+        - {x: -14, y: -19}
+        - {x: 11, y: -19}
+        - {x: 13, y: -17}
+        - {x: 16, y: -12}
+        - {x: 16, y: 12}
+    - name: attackmagic15
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 498
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attackmagic16
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 498
+        width: 24
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attackmagic20
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 499
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attackmagic21
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 499
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attackmagic22
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 499
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attackmagic17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 499
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attackmagic18
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 499
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attackmagic19
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 499
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: staff1
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 486
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: staff2
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 486
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: staff3
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 486
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attacksword14
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 423
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 24}
+        - {x: -21, y: 10}
+        - {x: -21, y: -24}
+        - {x: 10, y: -24}
+        - {x: 21, y: -16}
+        - {x: 21, y: 20}
+        - {x: 19, y: 24}
+    - name: attacksword1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 423
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attacksword2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 423
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attacksword3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 423
+        width: 29
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attacksword4
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 424
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -1}
+        - {x: -16, y: -9}
+        - {x: -10, y: -17}
+        - {x: 16, y: -17}
+        - {x: 16, y: 0}
+        - {x: 14, y: 17}
+        - {x: -3, y: 17}
+        - {x: -6, y: 12}
+    - name: attacksword5
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 423
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6.5, y: 17.5}
+        - {x: -16.5, y: 7.5}
+        - {x: -16.5, y: -8.5}
+        - {x: -7.5, y: -17.5}
+        - {x: 16.5, y: -17.5}
+        - {x: 16.5, y: 8.5}
+        - {x: 14.5, y: 17.5}
+    - name: attacksword6
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 423
+        width: 68
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attacksword7
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 423
+        width: 57
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attacksword8
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 423
+        width: 54
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attacksword9
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 423
+        width: 55
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attacksword10
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 423
+        width: 49
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attacksword11
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 423
+        width: 44
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attacksword12
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 423
+        width: 37
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attacksword13
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 423
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attacksword15
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 425
+        width: 41
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8.5, y: 15.5}
+        - {x: 4.5, y: 17.5}
+        - {x: -15.5, y: 17.5}
+        - {x: -20.5, y: 5.5}
+        - {x: -20.5, y: -17.5}
+        - {x: 19.5, y: -17.5}
+        - {x: 20.5, y: -16.5}
+        - {x: 20.5, y: 7.5}
+        - {x: 17.5, y: 6.5}
+    - name: attacksword16
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 425
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attacksword17
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 417
+        width: 28
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attacksword18
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 419
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attacksword19
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 366
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16, y: 7.5}
+        - {x: 7, y: 18.5}
+        - {x: -11, y: 18.5}
+        - {x: -16, y: 9.5}
+        - {x: -16, y: -10.5}
+        - {x: -9, y: -13.5}
+        - {x: -7, y: -13.5}
+        - {x: -9, y: -13.5}
+        - {x: -12, y: -16.5}
+        - {x: -12, y: -18.5}
+        - {x: 12, y: -18.5}
+        - {x: 13, y: -17.5}
+        - {x: 13, y: -16.5}
+        - {x: 16, y: -15.5}
+    - name: attacksword20
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 366
+        width: 27
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attacksword21
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 366
+        width: 36
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: -21}
+        - {x: -12, y: -23}
+        - {x: 12, y: -23}
+        - {x: 12, y: -21}
+        - {x: 8, y: -17}
+        - {x: -7, y: -17}
+      - - {x: -7, y: 23}
+        - {x: -18, y: 9}
+        - {x: -18, y: -12}
+        - {x: -9, y: -14}
+        - {x: 14, y: -14}
+        - {x: 18, y: -13}
+        - {x: 18, y: 10}
+        - {x: 12, y: 23}
+    - name: attacksword22
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 366
+        width: 37
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11.5, y: -22.5}
+        - {x: 12.5, y: -22.5}
+        - {x: 12.5, y: -20.5}
+        - {x: 10.5, y: -16.5}
+        - {x: -6.5, y: -16.5}
+        - {x: -11.5, y: -17.5}
+      - - {x: -5.5, y: 22.5}
+        - {x: -18.5, y: 9.5}
+        - {x: -18.5, y: -10.5}
+        - {x: -3.5, y: -14.5}
+        - {x: 12.5, y: -14.5}
+        - {x: 16.5, y: -13.5}
+        - {x: 18.5, y: -9.5}
+        - {x: 18.5, y: 8.5}
+        - {x: 9.5, y: 22.5}
+    - name: attacksword23
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 366
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 21}
+        - {x: -19, y: 7}
+        - {x: -19, y: -18}
+        - {x: -13, y: -21}
+        - {x: 19, y: -21}
+        - {x: 19, y: 21}
+    - name: attacksword24
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 365
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: 19}
+        - {x: -19.5, y: 8}
+        - {x: -19.5, y: -19}
+        - {x: 19.5, y: -19}
+        - {x: 19.5, y: 16}
+        - {x: 13.5, y: 19}
+    - name: attacksword25
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 366
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.5, y: 3.5}
+        - {x: 13.5, y: 18.5}
+        - {x: -6.5, y: 18.5}
+        - {x: -19.5, y: -1.5}
+        - {x: -19.5, y: -18.5}
+        - {x: 12.5, y: -18.5}
+        - {x: 12.5, y: -15.5}
+        - {x: 10.5, y: -13.5}
+        - {x: 19.5, y: -10.5}
+    - name: attacksword26
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 366
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 18}
+        - {x: -12, y: 7}
+        - {x: -16, y: -3}
+        - {x: -16, y: -18}
+        - {x: 16, y: -18}
+        - {x: 16, y: 8}
+        - {x: 12, y: 18}
+    - name: attacksword27
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 366
+        width: 29
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attacksword28
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 366
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attacksword29
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 366
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: staffdodge1
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 360
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: staffdodge2
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 360
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 19}
+        - {x: -16, y: 7}
+        - {x: -16, y: -19}
+        - {x: 11, y: -19}
+        - {x: 16, y: -12}
+        - {x: 16, y: 19}
+    - name: dodge1
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 361
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: dodge2
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 360
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: dodge3
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 360
+        width: 45
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: dodge4
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 360
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: icemagic3
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 276
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 21.5}
+        - {x: -20, y: 19.5}
+        - {x: -20, y: -20.5}
+        - {x: -16, y: -21.5}
+        - {x: 18, y: -21.5}
+        - {x: 20, y: -20.5}
+        - {x: 20, y: 21.5}
+    - name: icemagic4
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 277
+        width: 39
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 21.5}
+        - {x: -19.5, y: 19.5}
+        - {x: -19.5, y: -21.5}
+        - {x: 14.5, y: -21.5}
+        - {x: 19.5, y: -17.5}
+        - {x: 19.5, y: 17.5}
+        - {x: 15.5, y: 21.5}
+    - name: icemagic5
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 280
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 18.5}
+        - {x: -11, y: 16.5}
+        - {x: -18, y: 10.5}
+        - {x: -18, y: -12.5}
+        - {x: -14, y: -18.5}
+        - {x: 16, y: -18.5}
+        - {x: 18, y: -13.5}
+        - {x: 18, y: 12.5}
+        - {x: 8, y: 18.5}
+    - name: icemagic6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 280
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 18.5}
+        - {x: -18, y: 15.5}
+        - {x: -18, y: -13.5}
+        - {x: -13, y: -18.5}
+        - {x: 11, y: -18.5}
+        - {x: 18, y: -14.5}
+        - {x: 18, y: 13.5}
+        - {x: 13, y: 18.5}
+    - name: icemagic7
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 285
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: firemagic1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 291
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: firemagic2
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 288
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: firemagic3
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 286
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: firemagic4
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 284
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: firemagic5
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 282
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: firemagic6
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 282
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: firemagic7
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 282
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: firemagic8
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 282
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: icemagic8
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 288
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: icemagic9
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 291
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: thundermagic2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 201
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: thundermagic3
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 197
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: thundermagic4
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 186
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4.5, y: 22}
+        - {x: -20.5, y: 18}
+        - {x: -20.5, y: -16}
+        - {x: -8.5, y: -22}
+        - {x: 14.5, y: -22}
+        - {x: 20.5, y: -16}
+        - {x: 20.5, y: 18}
+        - {x: 6.5, y: 22}
+    - name: thundermagic5
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 193
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: thundermagic6
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 197
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: thundermagic7
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 201
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalmagic1
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 185
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.5, y: 19.5}
+        - {x: -16.5, y: 1.5}
+        - {x: -16.5, y: -19.5}
+        - {x: 16.5, y: -19.5}
+        - {x: 16.5, y: -10.5}
+        - {x: 7.5, y: 19.5}
+    - name: criticalmagic2
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 185
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12.5, y: 19.5}
+        - {x: -7.5, y: 19.5}
+        - {x: -16.5, y: 7.5}
+        - {x: -16.5, y: -19.5}
+        - {x: 11.5, y: -19.5}
+        - {x: 15.5, y: -16.5}
+        - {x: 16.5, y: -14.5}
+        - {x: 16.5, y: 3.5}
+    - name: criticalmagic3
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 186
+        width: 53
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26.5, y: -14.5}
+        - {x: -23.5, y: -18.5}
+        - {x: 26.5, y: -18.5}
+        - {x: 26.5, y: 5.5}
+        - {x: 18.5, y: 18.5}
+        - {x: -15.5, y: 18.5}
+        - {x: -26.5, y: 2.5}
+    - name: criticalmagic4
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 186
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalmagic5
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 186
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 18}
+        - {x: -16, y: 13}
+        - {x: -17, y: 4}
+        - {x: -17, y: -15}
+        - {x: -15, y: -18}
+        - {x: 13, y: -18}
+        - {x: 17, y: -17}
+        - {x: 17, y: 10}
+        - {x: 7, y: 18}
+    - name: criticalmagic6
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 187
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalmagic7
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 186
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8.5, y: 19.5}
+        - {x: -17.5, y: 5.5}
+        - {x: -17.5, y: -19.5}
+        - {x: 17.5, y: -19.5}
+        - {x: 17.5, y: -8.5}
+        - {x: 13.5, y: 19.5}
+    - name: criticalmagic8
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 185
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalmagic9
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 183
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 21}
+        - {x: -23, y: 21}
+        - {x: -23, y: -17}
+        - {x: -20, y: -21}
+        - {x: 23, y: -21}
+        - {x: 23, y: 4}
+        - {x: 15, y: 21}
+        - {x: -11, y: 21}
+        - {x: -11, y: 20}
+    - name: redmage_257
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 213
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalmagic10
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 183
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 19.5}
+        - {x: -22.5, y: -19.5}
+        - {x: 22.5, y: -19.5}
+        - {x: 22.5, y: 2.5}
+        - {x: 7.5, y: 19.5}
+    - name: criticalmagic11
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 182
+        width: 46
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 20}
+        - {x: -23, y: 7}
+        - {x: -23, y: -15}
+        - {x: -19, y: -20}
+        - {x: 23, y: -20}
+        - {x: 23, y: 11}
+        - {x: 9, y: 20}
+    - name: criticalmagic12
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 181
+        width: 46
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 20}
+        - {x: -23, y: 5}
+        - {x: -23, y: -13}
+        - {x: -21, y: -20}
+        - {x: 23, y: -20}
+        - {x: 23, y: 4}
+        - {x: 9, y: 20}
+    - name: thundermagic1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 204
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: thundermagic8
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 204
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalmagic13
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 130
+        width: 46
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 20}
+        - {x: -10, y: 20}
+        - {x: -23, y: 7}
+        - {x: -23, y: -17}
+        - {x: -14, y: -20}
+        - {x: 23, y: -20}
+        - {x: 23, y: -5}
+        - {x: 22, y: -4}
+    - name: criticalmagic14
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 129
+        width: 46
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 21.5}
+        - {x: -23, y: -21.5}
+        - {x: 23, y: -21.5}
+        - {x: 23, y: 15.5}
+        - {x: 13, y: 21.5}
+    - name: criticalmagic15
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 130
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: -21}
+        - {x: 23, y: -21}
+        - {x: 23, y: 2}
+        - {x: 15, y: 21}
+        - {x: -18, y: 21}
+        - {x: -23, y: 10}
+    - name: criticalmagic16
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 129
+        width: 45
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3.5, y: 26}
+        - {x: -16.5, y: 11}
+        - {x: -22.5, y: 2}
+        - {x: -22.5, y: -19}
+        - {x: -18.5, y: -26}
+        - {x: 22.5, y: -26}
+        - {x: 22.5, y: 26}
+    - name: criticalmagic17
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 129
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 26}
+        - {x: -20, y: 13}
+        - {x: -23, y: 1}
+        - {x: -23, y: -20}
+        - {x: -12, y: -25}
+        - {x: 4, y: -24}
+        - {x: 6, y: -20}
+        - {x: 6, y: -19}
+        - {x: 6, y: -26}
+        - {x: 23, y: -26}
+        - {x: 23, y: 26}
+    - name: criticalmagic18
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 129
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 24}
+        - {x: -21, y: 15}
+        - {x: -23, y: 6}
+        - {x: -23, y: -18}
+        - {x: -14, y: -22}
+        - {x: 2, y: -23}
+        - {x: 6, y: -18}
+        - {x: 6, y: -16}
+        - {x: 4, y: -14}
+        - {x: 2, y: -8}
+        - {x: 7, y: -17}
+        - {x: 7, y: -24}
+        - {x: 23, y: -24}
+        - {x: 23, y: -3}
+        - {x: 10, y: 24}
+    - name: criticalmagic19
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 129
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: -16}
+        - {x: -16, y: -24}
+        - {x: -3, y: -24}
+        - {x: 4, y: -22}
+        - {x: 6, y: -18}
+        - {x: 6, y: -17}
+        - {x: 7, y: -14}
+        - {x: 6, y: -24}
+        - {x: 23, y: -24}
+        - {x: 23, y: 0}
+        - {x: 14, y: 24}
+        - {x: -14, y: 24}
+        - {x: -23, y: 9}
+    - name: criticalmagic20
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 129
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 24}
+        - {x: -20, y: 21}
+        - {x: -23, y: 5}
+        - {x: -23, y: -18}
+        - {x: -14, y: -24}
+        - {x: 23, y: -24}
+        - {x: 23, y: -6}
+        - {x: 8, y: 24}
+    - name: criticalmagic21
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 129
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: -24}
+        - {x: 23, y: -24}
+        - {x: 23, y: -1}
+        - {x: 13, y: 24}
+        - {x: -12, y: 24}
+        - {x: -23, y: 3}
+    - name: criticalmagic22
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 129
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 24}
+        - {x: -23, y: 20}
+        - {x: -23, y: -22}
+        - {x: -21, y: -24}
+        - {x: 23, y: -24}
+        - {x: 23, y: 7}
+        - {x: 6, y: 24}
+    - name: criticalmagic23
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 133
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalsword1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 76
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 19}
+        - {x: -18, y: -5}
+        - {x: -18, y: -19}
+        - {x: 17, y: -19}
+        - {x: 18, y: -18}
+        - {x: 18, y: 9}
+        - {x: 16, y: 19}
+    - name: criticalsword2
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 76
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6.5, y: 19}
+        - {x: -19.5, y: -7}
+        - {x: -19.5, y: -19}
+        - {x: 19.5, y: -19}
+        - {x: 19.5, y: 0}
+        - {x: 16.5, y: 12}
+        - {x: 13.5, y: 19}
+    - name: criticalsword3
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 76
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4.5, y: 19}
+        - {x: -20.5, y: 0}
+        - {x: -20.5, y: -7}
+        - {x: -8.5, y: -19}
+        - {x: 20.5, y: -19}
+        - {x: 20.5, y: 0}
+        - {x: 17.5, y: 12}
+        - {x: 13.5, y: 19}
+    - name: criticalsword4
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 76
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 19}
+        - {x: -7, y: 12}
+        - {x: -6, y: 9}
+        - {x: -16, y: 11}
+        - {x: -18, y: 11}
+        - {x: -18, y: 1}
+        - {x: -13, y: -15}
+        - {x: -8, y: -19}
+        - {x: 17, y: -19}
+        - {x: 18, y: -18}
+        - {x: 18, y: -3}
+        - {x: 13, y: 19}
+    - name: criticalsword5
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 76
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalsword6
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 76
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalsword7
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 76
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalsword8
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 76
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalsword9
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 76
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalsword10
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 76
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalsword11
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 76
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalsword12
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 76
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalsword13
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 76
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalsword14
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 76
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalsword15
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 76
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalsword16
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 76
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalsword17
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 76
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalsword18
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 76
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalsword19
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 76
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5.5, y: 15}
+        - {x: 2.5, y: 14}
+        - {x: 4.5, y: 15}
+        - {x: 14.5, y: 22}
+        - {x: 14.5, y: 24}
+        - {x: -20.5, y: 24}
+        - {x: -23.5, y: 14}
+        - {x: -23.5, y: -23}
+        - {x: -19.5, y: -24}
+        - {x: 23.5, y: -24}
+        - {x: 23.5, y: 0}
+        - {x: 15.5, y: 18}
+    - name: criticalsword20
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 76
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 19}
+        - {x: -22.5, y: -19}
+        - {x: 22.5, y: -19}
+        - {x: 22.5, y: 19}
+    - name: criticalsword21
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 76
+        width: 46
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 19}
+        - {x: -23, y: 9}
+        - {x: -23, y: -19}
+        - {x: 11, y: -19}
+        - {x: 23, y: -2}
+        - {x: 23, y: 15}
+        - {x: 12, y: 19}
+    - name: criticalsword22
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 76
+        width: 37
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11.5, y: -9.5}
+        - {x: 11.5, y: -7.5}
+        - {x: 12.5, y: -6.5}
+        - {x: 11.5, y: -8.5}
+        - {x: 11.5, y: -10.5}
+        - {x: 13.5, y: -12.5}
+        - {x: 18.5, y: -13.5}
+        - {x: 18.5, y: 18.5}
+        - {x: 14.5, y: 23.5}
+        - {x: -12.5, y: 23.5}
+        - {x: -17.5, y: 22.5}
+        - {x: -18.5, y: 17.5}
+        - {x: -18.5, y: -23.5}
+        - {x: 2.5, y: -23.5}
+        - {x: 3.5, y: -22.5}
+        - {x: 4.5, y: -19.5}
+        - {x: 7.5, y: -15.5}
+    - name: criticalsword23
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 76
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalsword24
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 76
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalsword25
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 76
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalsword26
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 19
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 22}
+        - {x: -22, y: 14}
+        - {x: -22, y: 10}
+        - {x: -18, y: 10}
+        - {x: -22, y: 2}
+        - {x: -22, y: -22}
+        - {x: 21, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 21}
+        - {x: 16, y: 22}
+    - name: redmage_314
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 19
+        width: 43
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2.5, y: 18.5}
+        - {x: -14.5, y: 18.5}
+        - {x: -17.5, y: 12.5}
+        - {x: -21.5, y: 0.5}
+        - {x: -21.5, y: -16.5}
+        - {x: -18.5, y: -18.5}
+        - {x: 4.5, y: -18.5}
+        - {x: 5.5, y: -17.5}
+        - {x: 21.5, y: -7.5}
+        - {x: 21.5, y: 1.5}
+    - name: criticalsword28
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 19
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 18.5}
+        - {x: -19, y: 14.5}
+        - {x: -19, y: -18.5}
+        - {x: 7, y: -18.5}
+        - {x: 19, y: -10.5}
+        - {x: 19, y: 4.5}
+        - {x: 5, y: 18.5}
+    - name: criticalsword29
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 19
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19, y: 2.5}
+        - {x: 12, y: 14.5}
+        - {x: 2, y: 18.5}
+        - {x: -19, y: 18.5}
+        - {x: -19, y: -18.5}
+        - {x: 2, y: -18.5}
+        - {x: 3, y: -17.5}
+        - {x: 3, y: -16.5}
+        - {x: 19, y: -8.5}
+    - name: criticalsword30
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 19
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 18.5}
+        - {x: -19, y: 16.5}
+        - {x: -19, y: -18.5}
+        - {x: 14, y: -18.5}
+        - {x: 19, y: -15.5}
+        - {x: 19, y: 0.5}
+        - {x: 3, y: 18.5}
+    - name: criticalsword31
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 19
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 18.5}
+        - {x: -19, y: 13.5}
+        - {x: -19, y: -18.5}
+        - {x: 7, y: -18.5}
+        - {x: 19, y: -9.5}
+        - {x: 19, y: 1.5}
+        - {x: 0, y: 18.5}
+    - name: criticalsword32
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 19
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.5, y: -18.5}
+        - {x: 19.5, y: -18.5}
+        - {x: 19.5, y: 2.5}
+        - {x: 4.5, y: 18.5}
+        - {x: -15.5, y: 18.5}
+        - {x: -19.5, y: 12.5}
+    - name: criticalsword33
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 19
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: criticalsword34
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 19
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6.5, y: 17.5}
+        - {x: -8.5, y: 17.5}
+        - {x: -17.5, y: 7.5}
+        - {x: -17.5, y: -17.5}
+        - {x: 10.5, y: -17.5}
+        - {x: 13.5, y: -16.5}
+        - {x: 17.5, y: -10.5}
+        - {x: 17.5, y: -0.5}
+    - name: criticalsword35
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 19
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.5, y: 17.5}
+        - {x: -17.5, y: 8.5}
+        - {x: -17.5, y: -17.5}
+        - {x: 13.5, y: -17.5}
+        - {x: 17.5, y: -14.5}
+        - {x: 17.5, y: 2.5}
+        - {x: 10.5, y: 17.5}
+    - name: criticalsword36
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 19
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: -17.5}
+        - {x: 16.5, y: -17.5}
+        - {x: 16.5, y: 11.5}
+        - {x: 15.5, y: 17.5}
+        - {x: -9.5, y: 17.5}
+        - {x: -16.5, y: 9.5}
+    - name: criticalsword37
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 19
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: attackmagic23
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 499
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: icemagic1
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 281
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: icemagic2
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 279
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: -1.5}
+        - {x: -2, y: -5.5}
+        - {x: -6, y: -10.5}
+        - {x: -7, y: -13.5}
+        - {x: -7, y: -18.5}
+        - {x: -6, y: -19.5}
+        - {x: 9, y: -19.5}
+        - {x: 18, y: -13.5}
+        - {x: 18, y: -3.5}
+        - {x: 16, y: -1.5}
+      - - {x: -15, y: -1.5}
+        - {x: -18, y: -4.5}
+        - {x: -18, y: -12.5}
+        - {x: -16, y: -15.5}
+        - {x: -11, y: -15.5}
+        - {x: -5, y: -13.5}
+        - {x: -5, y: -4.5}
+        - {x: -9, y: -1.5}
+      - - {x: -4, y: 19.5}
+        - {x: -6, y: 18.5}
+        - {x: -7, y: 15.5}
+        - {x: -14, y: 15.5}
+        - {x: -18, y: 11.5}
+        - {x: -18, y: 3.5}
+        - {x: -14, y: 0.5}
+        - {x: 1, y: 0.5}
+        - {x: 7, y: 8.5}
+        - {x: 7, y: 19.5}
+      - - {x: 10, y: 15.5}
+        - {x: 7, y: 12.5}
+        - {x: 6, y: 9.5}
+        - {x: 6, y: 4.5}
+        - {x: 9, y: 1.5}
+        - {x: 12, y: 0.5}
+        - {x: 15, y: 0.5}
+        - {x: 18, y: 3.5}
+        - {x: 18, y: 13.5}
+        - {x: 14, y: 15.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
