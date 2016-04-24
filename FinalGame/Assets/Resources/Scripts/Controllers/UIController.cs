@@ -58,7 +58,7 @@ public class UIController : MonoBehaviour {
 	}
 
     public void saveBest() {
-        bestScoreText.text = scoreText.text;
+        bestScoreText.text = "Best: " + FormatTime(timeElapsed);
     }
 
     public void resetTimer() {
