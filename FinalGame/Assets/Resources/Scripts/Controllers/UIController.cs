@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-//using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour {
 
@@ -41,7 +41,7 @@ public class UIController : MonoBehaviour {
 
 	// Modify the button object's OnClick() properties in the inspector window to set button's destinations
 	public void ChangeScene(string sceneName) {
-		//SceneManager.LoadScene (sceneName);
+		SceneManager.LoadScene (sceneName);
 	}
 
 	public void QuitGame() {
@@ -58,7 +58,12 @@ public class UIController : MonoBehaviour {
 	}
 
     public void saveBest() {
-        bestScoreText.text = "Best: " + FormatTime(timeElapsed);
+		if (timeElapsed > bestTime) {
+			bestScoreText.text = "Best: " + FormatTime (timeElapsed);
+			bestTime = timeElapsed;
+		} else {
+			bestScoreText.text = "Best: " + FormatTime (bestTime);
+		}
     }
 
     public void resetTimer() {

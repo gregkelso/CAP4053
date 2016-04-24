@@ -12,6 +12,7 @@ TagManager:
   - Debug
   - Waypoint
   - Spawners
+  - LevelManager
   layers:
   - Default
   - TransparentFX
@@ -63,4 +64,7 @@ TagManager:
     locked: 0
   - name: Effect
     uniqueID: 4015473643
+    locked: 0
+  - name: UI
+    uniqueID: 1596317101
     locked: 0
