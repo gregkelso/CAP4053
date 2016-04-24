@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11451874}
   - 114: {fileID: 11455298}
   - 114: {fileID: 11402496}
+  - 114: {fileID: 11415278}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
@@ -61,6 +62,19 @@ MonoBehaviour:
   debugGrid: 0
   debugPath: 0
   smoothen: 1
+--- !u!114 &11415278
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b960a3694716394293c60fdb743a21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+  sensors: {fileID: 0}
 --- !u!114 &11451874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,6 +103,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6c1be835ea62bc4098e3e8655595d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  front: {fileID: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}
+  back: {fileID: 0}
+  adjacent: {fileID: 0}
+  frontSlice: {fileID: 0}
+  leftSlice: {fileID: 0}
+  rightSlice: {fileID: 0}
+  backSlice: {fileID: 0}
   debugRayCaster: 0
   debugAdjacentSensor: 0
   debugPieSensor: 0

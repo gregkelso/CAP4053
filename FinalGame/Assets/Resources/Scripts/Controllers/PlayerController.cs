@@ -58,7 +58,7 @@ public class PlayerController : Controller {
 
         if (Input.GetKeyDown(KeyCode.Alpha3)) {
             //Instantiate Bomber
-            summoner.createBomber(getHeading());
+            //summoner.createBomber(getHeading());
         }
     }
 }

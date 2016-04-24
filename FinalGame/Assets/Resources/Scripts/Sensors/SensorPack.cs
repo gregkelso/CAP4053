@@ -6,15 +6,15 @@ public class SensorPack : MonoBehaviour {
     private Controller controller;
 
     //Sensors being added
-    private RayCaster front;
-    private RayCaster left;
-    private RayCaster right;
-    private RayCaster back;
-    private AdjacentAgentSensor adjacent;
-    private PieSliceSensor frontSlice;
-    private PieSliceSensor leftSlice;
-    private PieSliceSensor rightSlice;
-    private PieSliceSensor backSlice;
+    public RayCaster front;
+    public RayCaster left;
+    public RayCaster right;
+    public RayCaster back;
+    public AdjacentAgentSensor adjacent;
+    public PieSliceSensor frontSlice;
+    public PieSliceSensor leftSlice;
+    public PieSliceSensor rightSlice;
+    public PieSliceSensor backSlice;
 
     //Debug flags for all sensor in the pack
     public bool debugRayCaster;
