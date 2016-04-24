@@ -53,7 +53,9 @@ public class UIController : MonoBehaviour {
 	public string FormatTime(float value) {
 		int minutes = (int)(Mathf.Floor (value / 60));
 		int seconds = (int)(Mathf.Floor (value % 60));
+		int milli = (int)(Time.time * 1000);
+		milli %= 1000;
 
-		return string.Format ("{0:D2} : {1:D2}", minutes, seconds);
+		return string.Format ("{0:D2}:{1:D2}:{2:D3}", minutes, seconds, milli);
 	}
 }   
