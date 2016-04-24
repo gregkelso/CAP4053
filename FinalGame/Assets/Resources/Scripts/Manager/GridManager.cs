@@ -6,7 +6,7 @@ public class GridManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        float nodeRadius = 10;
+        float nodeRadius = 8;
         LayerMask mask = 1 << LayerMask.NameToLayer("Obstacles");
         grid = new Grid(Vector3.zero, gameObject.transform.localScale, nodeRadius, mask);
 
