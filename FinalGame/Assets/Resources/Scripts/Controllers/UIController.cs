@@ -14,7 +14,8 @@ public class UIController : MonoBehaviour {
 	private bool paused = false;
 
 	void Start() {
-		PauseUI.SetActive (false);
+        if (PauseUI != null) 
+		    PauseUI.SetActive (false);
 		timeElapsed = 0.0f;
 	}
 
@@ -27,11 +28,13 @@ public class UIController : MonoBehaviour {
 			Time.timeScale = 0;
 		}
 		if (!paused) {
-			PauseUI.SetActive (false);
+            if(PauseUI != null)
+			    PauseUI.SetActive (false);
 			Time.timeScale = 1;
 		}
 
-		scoreText.text = "Time: " + FormatTime (timeElapsed);
+        if(scoreText != null)
+		    scoreText.text = "Time: " + FormatTime (timeElapsed);
 		timeElapsed += Time.deltaTime;
 	}
 
