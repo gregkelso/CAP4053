@@ -23,16 +23,13 @@ public class EnemyController : Controller {
 
     void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.tag == "Player") {
-            //Destroy self
-            Destroy(gameObject);
-
-            //Destroy other 
-            Destroy(other.gameObject);
-
             //Signal to restart game
-            GameObject.Find("Player").GetComponent<LevelManager>().ResetLevel();
+            GameObject player = other.gameObject;
+            LevelManager manager = player.GetComponent<LevelManager>();
+
+            manager.ResetLevel();
         }
-        else if(other.gameObject.tag == "Summon") {
+        else if (other.gameObject.tag == "Summon") {
             destroyself();
 
             //Destroy other - through manager
@@ -46,6 +43,7 @@ public class EnemyController : Controller {
         if (p != null)
             p.Destroy();
 
-        Destroy(gameObject);
+        if(gameObject != null)
+            Destroy(gameObject);
     }
 }

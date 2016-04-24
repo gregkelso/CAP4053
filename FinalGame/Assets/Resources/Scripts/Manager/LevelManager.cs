@@ -23,8 +23,13 @@ public class LevelManager : MonoBehaviour {
         deactivateSpawners();
 
         //Reposition Player to center
-        player.transform.position = Vector3.zero;
-        player.GetComponent<PlayerController>().setHeading(0);
+        try {
+            player.transform.position = Vector3.zero;
+            player.GetComponent<PlayerController>().setHeading(0);
+        }
+        catch(System.Exception) {
+
+        }
     }
 
     //Destroy all enemies
@@ -32,17 +37,21 @@ public class LevelManager : MonoBehaviour {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         
         foreach(GameObject enemy in enemies) {
-            enemy.GetComponent<EnemyController>().destroyself();
+            EnemyController cont = enemy.GetComponent<EnemyController>();
+            if(cont != null)
+                cont.destroyself();
         }
     }
 
     //Destroy all summons
     private void destroySummons() {
-        summonManager.destroyAll();
+        //if(summonManager != null)
+            summonManager.destroyAll();
     }
 
     //Deactivate all spawners
     private void deactivateSpawners() {
-        spawnerManager.deactivateAll();
+        //if(spawnerManager != null)
+            spawnerManager.deactivateAll();
     }
 }

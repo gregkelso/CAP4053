@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour {
 	void Start () {
         //Invoke function on delay
         float initDelay = 1;
-        float delay = 1;       
+        float delay = 2;       
         InvokeRepeating("spawnEnemy", initDelay, delay);
     }
 

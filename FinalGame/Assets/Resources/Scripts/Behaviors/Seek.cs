@@ -25,8 +25,6 @@ public class Seek : MonoBehaviour {
         controller = GetComponent<Controller>(); //Obtain agent controller for movement
         pathFinder = new PathFinder(manager); //Initialize PathFinder
         targetSet = false; //A target hasn't been selected
-        //debugPath = true;
-        //smoothen = true;
 	}
 	
 	// Update is called once per frame
