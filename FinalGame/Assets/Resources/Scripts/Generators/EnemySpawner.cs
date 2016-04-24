@@ -19,8 +19,10 @@ public class EnemySpawner : MonoBehaviour {
     }
 
     void spawnEnemy() {
-        GameObject obj = Instantiate<GameObject>(enemyPrefab); //Create based on prefab
-        obj.transform.parent = enemies.transform; //Set enemies folder as parent
-        obj.transform.localPosition = transform.position; //Set position onto spawner
+        if (gameObject.activeSelf) {
+            GameObject obj = Instantiate<GameObject>(enemyPrefab); //Create based on prefab
+            obj.transform.parent = enemies.transform; //Set enemies folder as parent
+            obj.transform.localPosition = transform.position; //Set position onto spawner
+        }
     }
 }

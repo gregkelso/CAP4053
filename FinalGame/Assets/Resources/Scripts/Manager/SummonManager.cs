@@ -95,11 +95,25 @@ public class SummonManager : MonoBehaviour {
             else if (type == SummonType.BOMBER) 
                 bombers.Remove(obj);
 
-            //Animator animator = obj.GetComponent<Animator>();
-            //animator.SetBool("Dying", true);
-
             //Destroy game object
             Destroy(obj);
         }
+    }
+
+    public void destroyAll() {
+        foreach(GameObject obj in attackers) {
+            Destroy(obj);
+        }
+        attackers.Clear();
+
+        foreach(GameObject obj in defenders) {
+            Destroy(obj);
+        }
+        defenders.Clear();
+
+        foreach(GameObject obj in bombers) {
+            Destroy(obj);
+        }
+        bombers.Clear();
     }
 }

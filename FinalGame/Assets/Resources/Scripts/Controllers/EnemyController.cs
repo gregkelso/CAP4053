@@ -30,18 +30,22 @@ public class EnemyController : Controller {
             Destroy(other.gameObject);
 
             //Signal to restart game
-            SceneManager.LoadScene("GameStagingScene");
+            GameObject.Find("Player").GetComponent<LevelManager>().ResetLevel();
         }
         else if(other.gameObject.tag == "Summon") {
-            //Destroy self
-            Path p = gameObject.GetComponent<Seek>().getPath();
-            if (p != null)
-            	p.Destroy();
-
-            Destroy(gameObject);
+            destroyself();
 
             //Destroy other - through manager
             other.gameObject.GetComponent<SummonController>().destroy();
         }
+    }
+
+    public void destroyself() {
+        //Destroy self
+        Path p = gameObject.GetComponent<Seek>().getPath();
+        if (p != null)
+            p.Destroy();
+
+        Destroy(gameObject);
     }
 }

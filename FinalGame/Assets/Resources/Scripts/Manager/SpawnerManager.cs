@@ -63,4 +63,30 @@ public class SpawnerManager : MonoBehaviour {
             obj.SetActive(false);
         }
     }
+
+    void deactivateSpawner(GameObject obj) {
+        //Remove spawner from active list
+        active.Remove(obj);
+
+        //Add spawner to inactive list
+        inactive.Add(obj);
+
+        //Set not active
+        obj.SetActive(false);      
+    }
+
+    public void deactivateAll() {
+        List<GameObject> delete = new List<GameObject>();
+
+        foreach(GameObject obj in active) {
+            delete.Add(obj);
+        }
+
+
+        foreach(GameObject obj in delete) {
+            deactivateSpawner(obj);
+        }
+
+        delete.Clear();
+    }
 }
