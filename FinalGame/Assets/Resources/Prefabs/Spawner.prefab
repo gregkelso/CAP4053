@@ -10,9 +10,11 @@ GameObject:
   - 4: {fileID: 481178}
   - 212: {fileID: 21273618}
   - 114: {fileID: 11482872}
-  m_Layer: 10
+  - 95: {fileID: 9509084}
+  - 111: {fileID: 11136092}
+  m_Layer: 16
   m_Name: Spawner
-  m_TagString: Enemy
+  m_TagString: Spawners
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,6 +31,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!95 &9509084
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189696}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d35a7b31615310a468dd145e7e3efb92, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!111 &11136092
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189696}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: fcf729d563eeaa64683c321f12700feb, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &11482872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -41,6 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 111104, guid: f56361a48f192a54390a0982d96c85a7, type: 2}
+  animator: {fileID: 0}
 --- !u!212 &21273618
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -80,11 +114,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_TagString
-      value: Enemy
+      value: Spawners
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Layer
-      value: 10
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.x
@@ -98,6 +132,18 @@ Prefab:
       propertyPath: enemyPrefab
       value: 
       objectReference: {fileID: 111104, guid: f56361a48f192a54390a0982d96c85a7, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d35a7b31615310a468dd145e7e3efb92, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: fcf729d563eeaa64683c321f12700feb, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 189696}

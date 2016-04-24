@@ -14,6 +14,8 @@ public class SummonManager : MonoBehaviour {
     public List<GameObject> defenders;
     public List<GameObject> bombers;
 
+    AnimationClip clip;
+
     void Awake() {
         //Get Objects and load prefabs
         summons = GameObject.Find("Summons");
@@ -29,11 +31,6 @@ public class SummonManager : MonoBehaviour {
         bombers = new List<GameObject>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
     public GameObject createAttacker(float heading) {
         //Instantiate Attacker
         GameObject obj = Instantiate<GameObject>(attacker);
@@ -97,6 +94,9 @@ public class SummonManager : MonoBehaviour {
                 defenders.Remove(obj);
             else if (type == SummonType.BOMBER) 
                 bombers.Remove(obj);
+
+            //Animator animator = obj.GetComponent<Animator>();
+            //animator.SetBool("Dying", true);
 
             //Destroy game object
             Destroy(obj);

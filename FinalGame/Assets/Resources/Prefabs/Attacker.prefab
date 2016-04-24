@@ -13,7 +13,6 @@ GameObject:
   - 114: {fileID: 11417402}
   - 114: {fileID: 11422904}
   - 114: {fileID: 11490742}
-  - 111: {fileID: 11174684}
   - 95: {fileID: 9529640}
   m_Layer: 13
   m_Name: Attacker
@@ -60,25 +59,11 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 5c6a50f3735488f42a68d9cb1fcc1189, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!111 &11174684
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 132560}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 68c9beeabc894ec4e99e58c6c58d937c, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &11417402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -93,9 +78,10 @@ MonoBehaviour:
   opponent:
     serializedVersion: 2
     m_Bits: 1024
-  movementSpeed: 250000
+  movementSpeed: 300000
   rotationSpeed: 250
   heading: 0
+  animator: {fileID: 0}
 --- !u!114 &11422904
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,7 +149,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: movementSpeed
-      value: 250000
+      value: 300000
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: debugAdjacentSensor
@@ -177,6 +163,14 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 5c6a50f3735488f42a68d9cb1fcc1189, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 132560}
