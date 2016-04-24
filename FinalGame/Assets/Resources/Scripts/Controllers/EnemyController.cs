@@ -27,6 +27,10 @@ public class EnemyController : Controller {
             GameObject player = other.gameObject;
             LevelManager manager = player.GetComponent<LevelManager>();
 
+            UIController canvas = GameObject.Find("Canvas").GetComponent<UIController>();
+            canvas.saveBest();
+            canvas.resetTimer();
+
             manager.ResetLevel();
         }
         else if (other.gameObject.tag == "Summon") {

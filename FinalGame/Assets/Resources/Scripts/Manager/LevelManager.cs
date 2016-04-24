@@ -6,16 +6,12 @@ public class LevelManager : MonoBehaviour {
     SummonManager summonManager;
     SpawnerManager spawnerManager; 
 
-    void Awake() {
-    }
-
 	// Use this for initialization
 	void Start () {
         player = GameObject.Find("Player");
         summonManager = player.GetComponent<SummonManager>();
         spawnerManager = GameObject.Find("Spawners").GetComponent<SpawnerManager>();      
     }
-
 
     public void ResetLevel() {
         destroyEnemies();

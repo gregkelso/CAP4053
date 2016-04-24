@@ -7,16 +7,15 @@ public class UIController : MonoBehaviour {
 
 	public GameObject PauseUI;
 	public Text scoreText;
+    public Text bestScoreText;
 	public float timeElapsed = 0.0f;
 	public float bestTime = 0.0f;
 
 	private bool paused = false;
-	//private TimeController timeController;
 
 	void Start() {
 		PauseUI.SetActive (false);
 		timeElapsed = 0.0f;
-		//timeController = GetComponent<TimeController> ();
 	}
 
 	void Update() {
@@ -30,10 +29,9 @@ public class UIController : MonoBehaviour {
 		if (!paused) {
 			PauseUI.SetActive (false);
 			Time.timeScale = 1;
-			//timeController.ManipulateTime (1, 1f);
 		}
 
-		scoreText.text = "TIME: " + FormatTime (timeElapsed) + "\nBEST: " + FormatTime (bestTime);
+		scoreText.text = "Time: " + FormatTime (timeElapsed);
 		timeElapsed += Time.deltaTime;
 	}
 
@@ -58,4 +56,12 @@ public class UIController : MonoBehaviour {
 
 		return string.Format ("{0:D2}:{1:D2}:{2:D3}", minutes, seconds, milli);
 	}
+
+    public void saveBest() {
+        bestScoreText.text = scoreText.text;
+    }
+
+    public void resetTimer() {
+        timeElapsed = 0.0f;
+    }
 }   
